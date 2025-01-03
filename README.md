@@ -16,10 +16,24 @@
 ## Training and Evaluation Results
 
 ### Step 2: Testing Semantic Segmentation Networks
-| **Model**           | **Dataset**       | **Epochs** | **mIoU (%)** | **Latency** | **FLOPs** | **Params** |
+| **Model**           | **Dataset**       | **Training Epochs** | **mIoU (%)** | **Latency** | **FLOPs** | **Params** |
 |----------------------|-------------------|------------|--------------|-------------|-----------|------------|
 | DeepLabV2           | LoveDA-urban     | 20         | TBD          | TBD         | TBD       | TBD        |
-| PIDNet (Real-time)  | LoveDA-urban     | 20         | TBD          | TBD         | TBD       | TBD        |
+| PIDNet (Real-time)  | LoveDA-urban     | 20         | 0.2665          | 10.16 ms         | 5.960G       | 7.624M        |
+
+
+## Userfull links
+a)  **Classic semantic segmentation network -  Backbone: R101 (pre-trained on ImageNet)**
+
+    - link
+
+b) **Real-time semantic segmentation network - Backbone:  PIDNet-S (pre-trained on ImageNet)**
+
+    - link
+
+
+
+
 
 ---
 
