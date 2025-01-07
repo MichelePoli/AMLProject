@@ -18,8 +18,8 @@
 ### Step 2: Testing Semantic Segmentation Networks
 | **Model**           | **Dataset**       | **Training Epochs** | **mIoU (%)** | **Latency** | **FLOPs** | **Params** |
 |----------------------|-------------------|------------|--------------|-------------|-----------|------------|
-| DeepLabV2           | LoveDA-urban     | 20         | TBD          | TBD         | TBD       | TBD        |
-| PIDNet (Real-time)  | LoveDA-urban     | 20         | 0.2665          | 10.16 ms         | 5.960G       | 7.624M        |
+| DeepLabV2           | LoveDA-urban     | 20         | 0.3204          | 41.85 ms         |  11.535G       | 62.231M        |
+| PIDNet (Real-time)  | LoveDA-urban     | 20         | 00.3590         | 17.43 ms        | 6.346G      | 7.718M       |
 
 
 ## Userfull links
