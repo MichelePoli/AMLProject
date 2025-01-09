@@ -22,28 +22,19 @@
 | PIDNet (Real-time)  | LoveDA-urban     | 20         | 00.3590         | 17.43 ms        | 6.346G      | 7.718M       |
 
 
-## Userfull links
-a)  **Classic semantic segmentation network -  Backbone: R101 (pre-trained on ImageNet)**
-
-    - link
-
-b) **Real-time semantic segmentation network - Backbone:  PIDNet-S (pre-trained on ImageNet)**
-
-    - link
-
-
-
-
-
 ---
 
 ### Step 3: Domain Shift Analysis
-| **Source → Target** | **Model**         | **Augmentation** | **mIoU (%)** | **Road** | **Building** | **Water** | ... |
-|---------------------|-------------------|------------------|--------------|----------|--------------|-----------|-----|
-| Urban → Rural       | PIDNet           | None             | TBD          | TBD      | TBD          | TBD       |     |
-| Urban → Rural       | PIDNet           | Aug. 1           | TBD          | TBD      | TBD          | TBD       |     |
-| Urban → Rural       | PIDNet           | Aug. 2           | TBD          | TBD      | TBD          | TBD       |     |
-| Urban → Rural       | PIDNet           | Aug. 1 + Aug. 2   | TBD          | TBD      | TBD          | TBD       |     |
+
+
+| **Source → Target** | **Model**         | **Augmentation**   | **mIoU (%)** | **Road** | **Building** | **Water** | **Background** | **Barren** | **Forest** | **Agricultural** |
+|---------------------|-------------------|--------------------|--------------|----------|--------------|-----------|----------------|------------|------------|------------------|
+| Urban → Rural       | PIDNet           | None               | 0.2398       | 0.1941      | 0.2424          | 0.3546       | 0.5024             | 0.0695         | 0.1023         | 0.3182               |
+| Urban → Rural       | PIDNet           | Aug. 1             | 0.2991          |  0.2875      | 0.3988          | 0.3671       | 0.5433            | 0.1118        | 0.1537        | 0.4357              |
+| Urban → Rural       | PIDNet           | Aug. 2             | 0.3080          | 0.3164      | 0.3849          | 0.3866       |  0.5353            | 0.1403        | 0.1604        | 0.4332              |
+| Urban → Rural       | PIDNet           | Aug. 1 + Aug. 2    | 0.2935          | 0.2883      | 0.3927          | 0.3681       | 0.5369            | 0.1363        | 0.1826        | 0.4266              |
+
+
 
 ---
 
