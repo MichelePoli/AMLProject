@@ -1,15 +1,43 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage[a4paper, left=2cm, right=2cm, top=3cm, bottom=3cm]{geometry} % Modifica i margini
 
-\title{Il mio primo documento LaTeX}
-\author{Il mio nome}
-\date{\today}
+
+\title{Real-time Domain Adaptation in
+Semantic Segmentation}
+\author{Attrovio Mario, Ghisolfo Giorgia, Russo Michele}
 
 \begin{document}
 
 \maketitle
 
-\section{Introduzione}
-Questo è un esempio di documento scritto in \LaTeX{} utilizzando Visual Studio Code.
+
+\begin{multicols}{2}
+    \section{Abstract}
+Semantic segmentation is a critical task in computer vision, enabling pixel-wise classification of images. However, the performance of segmentation models often degrades when applied to data from different domains, a challenge known as domain shift. This report explores real-time semantic segmentation in the context of domain adaptation using PIDNet as the backbone. We investigate the performance drop caused by domain shift between urban and rural datasets and evaluate mitigation strategies, including data augmentation and advanced domain adaptation techniques like adversarial training and image-to-image translation. Experimental results on the LoveDA dataset demonstrate that these methods significantly reduce the impact of domain shift while maintaining real-time inference capabilities, achieving a balanced trade-off between accuracy and computational efficiency.
+
+
+    
+    \section{Introduction}
+Semantic segmentation is a foundational task in computer vision, where each pixel in an image is assigned a label corresponding to a predefined class. It plays a vital role in applications such as autonomous driving, medical imaging, and remote sensing. Recent advancements in deep learning have yielded high-performing models, but these often struggle with domain shift—a phenomenon where a model trained on a source domain (e.g., urban images) performs poorly on a target domain (e.g., rural images). Addressing this challenge is crucial for real-world deployments where annotated data for all target domains is scarce or unavailable.
+Domain adaptation aims to bridge this performance gap by aligning the source and target domains without requiring extensive labeled data from the target domain. While several methods exist, real-time semantic segmentation introduces additional constraints, such as maintaining high inference speed and low computational cost. PIDNet, a real-time segmentation network inspired by Proportional-Integral-Derivative (PID) controllers, serves as the backbone for our study due to its efficiency and accuracy in real-time tasks.
+This report focuses on evaluating and improving the performance of PIDNet for domain-adaptive semantic segmentation using the LoveDA dataset. We first quantify the performance degradation caused by domain shift. Next, we implement data augmentation techniques and two domain adaptation approaches—adversarial training and image-to-image translation—to mitigate this issue. Our findings highlight the potential of these methods to enhance generalization while preserving the real-time capabilities of the model.
+
+\section{Related work}
+
+\section{Methods}
+
+\section{Experimental Results}
+
+\section{Conclusion}
+
+
+    
+\end{multicols}
+
+
+
+
 
 \end{document}
