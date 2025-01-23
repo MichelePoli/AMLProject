@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{multicol}
 \usepackage[a4paper, left=2cm, right=2cm, top=3cm, bottom=3cm]{geometry} % Modifica i margini
-
+\usepackage{hyperref} % Pacchetto per gestire i link ipertestuali
 
 \title{Real-time Domain Adaptation in
 Semantic Segmentation}
@@ -16,7 +16,8 @@ Semantic Segmentation}
 \begin{multicols}{2}
     \section{Abstract}
 Semantic segmentation is a critical task in computer vision, enabling pixel-wise classification of images. However, the performance of segmentation models often degrades when applied to data from different domains, a challenge known as domain shift. This report explores real-time semantic segmentation in the context of domain adaptation using PIDNet as the backbone. We investigate the performance drop caused by domain shift between urban and rural datasets and evaluate mitigation strategies, including data augmentation and advanced domain adaptation techniques like adversarial training and image-to-image translation. Experimental results on the LoveDA dataset demonstrate that these methods significantly reduce the impact of domain shift while maintaining real-time inference capabilities, achieving a balanced trade-off between accuracy and computational efficiency.
-
+The code can be found on our project website: 
+\url{https://github.com/MichelePoli/AMLProject}.
 
     
     \section{Introduction}
