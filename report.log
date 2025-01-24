@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.22)  24 JAN 2025 01:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.22)  24 JAN 2025 01:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -410,76 +410,70 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 14.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 18.
+(Font)              <7> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 18.
+(Font)              <5> on input line 22.
  [1
 
 {C:/Users/Mario/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
-LaTeX Warning: Reference `tab:urban' on page 2 undefined on input line 64.
+! LaTeX Error: \caption outside float.
 
-
-Overfull \hbox (40.70767pt too wide) in paragraph at lines 70--76
- [][] 
- []
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
-
-LaTeX Warning: Reference `tab:shift' on page 2 undefined on input line 79.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.72 			\caption
+                {Performance on LoveDA-Urban (Source Domain)}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 [2]
-Overfull \hbox (104.06888pt too wide) in paragraph at lines 85--95
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.93 			\caption
+                {Domain Shift: Urban $\rightarrow$ Rural}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (5.01146pt too wide) in paragraph at lines 93--107
  [][] 
  []
 
 
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
+! LaTeX Error: \caption outside float.
 
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
-
-LaTeX Warning: Reference `tab:extensions' on page 3 undefined on input line 98.
-
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.114 			\caption
+                 {Extensions on LoveDA-Rural (Target Domain)}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 (report.bbl) [3] (report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 79737D48FFBCB875150C21998A33FDCB;2280.
  ) 
 Here is how much of TeX's memory you used:
- 9164 strings out of 474486
- 145159 string characters out of 5743755
- 1946542 words of memory out of 5000000
- 31323 multiletter control sequences out of 15000+600000
+ 9161 strings out of 474486
+ 145094 string characters out of 5743755
+ 1951542 words of memory out of 5000000
+ 31320 multiletter control sequences out of 15000+600000
  563173 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,1023b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,7n,79p,1023b,651s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1000.pk><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -488,15 +482,17 @@ ype1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Mario/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mario/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Mario/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Mar
-io/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
-Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.
-pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmti10.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmtt10.pfb>
-Output written on report.pdf (3 pages, 177290 bytes).
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Mar
+io/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Us
+ers/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmsy5.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmsy7.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmti10.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on report.pdf (3 pages, 208313 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
+ 197 PDF objects out of 1000 (max. 8388607)
  31 named destinations out of 1000 (max. 500000)
  137 words of extra memory for PDF output out of 10000 (max. 10000000)
 

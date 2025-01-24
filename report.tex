@@ -12,7 +12,11 @@
 \begin{document}
 	\maketitle
 	
+	
+	
 	\begin{multicols}{2}
+		
+		
 		
 		\section{Abstract}
 		Semantic segmentation is a critical task in computer vision, enabling pixel-wise classification of images. However, the performance of segmentation models often degrades when applied to data from different domains, a challenge known as domain shift. This report explores real-time semantic segmentation in the context of domain adaptation using PIDNet as the backbone. We investigate the performance drop caused by domain shift between urban and rural datasets and evaluate mitigation strategies, including data augmentation and advanced domain adaptation techniques like adversarial training and image-to-image translation (DACS). Experimental results on the LoveDA dataset demonstrate that these methods significantly reduce the impact of domain shift while maintaining real-time inference capabilities, achieving a balanced trade-off between accuracy and computational efficiency. The code can be found on our project website: \url{https://github.com/MichelePoli/AMLProject}.
@@ -63,25 +67,32 @@
 		\subsection{Performance on Source Domain}
 		Table \ref{tab:urban} shows the performance of DeepLabV2 and PIDNet-S on the LoveDA-urban dataset (source domain). PIDNet-S, designed for real-time performance, achieved a significantly higher mIoU than DeepLabV2 while also providing latency, FLOPs, and parameter count.
 		
-		\begin{table}[h]
+			\vspace{2cm}
 			\centering
 			\caption{Performance on LoveDA-Urban (Source Domain)}
 			\label{tab:urban}
+			\tiny
 			\begin{tabular}{|l|c|c|c|c|}
 				\hline
 				Model & mIoU (\%) & Latency (ms) & FLOPs & Params \\ \hline
 				DeepLabV2 & 34.40 & - & - & - \\ \hline
 				PIDNet-S & 48.67 & 288.70 & 6.35G & 7.72M \\ \hline
 			\end{tabular}
-		\end{table}
+				\vspace{0.2cm}
+		
+		
+		
+		
+
 		
 		\subsection{Domain Shift Evaluation}
 		Table \ref{tab:shift} quantifies the domain shift from LoveDA-urban to LoveDA-rural. The baseline PIDNet-S model, trained on urban data, experienced a significant performance drop when tested on rural data. Data augmentations (A1 and A2) improved the mIoU, with A2 (photometric transforms) being the most effective. Adversarial training and DACS further mitigated the domain shift, achieving similar performance.
 		
-		\begin{table}[h]
+
 			\centering
 			\caption{Domain Shift: Urban $\rightarrow$ Rural}
 			\label{tab:shift}
+	 		\resizebox{0.5\textwidth}{!}{%
 			\begin{tabular}{|l|c|c|c|c|c|c|c|}
 				\hline
 				Model & Road & Building & Water & Barren & Forest & Agric. & mIoU \\ \hline
@@ -91,13 +102,14 @@
 				+ A1 + A2 & 27.92 & 32.97 & 33.98 & 10.50 & 10.69 & 37.45 & 29.35 \\ \hline
 				+ Adv. & 0.36 & 13.41 & 32.72 & 8.28 & 49.73 & 12.26 & 30.59 \\ \hline
 				+ DACS & 31.32 & 36.60 & 42.70 & 4.49 & 2.70 & 40.60 & 30.63 \\ \hline
-			\end{tabular}
-		\end{table}
+			\end{tabular}%
+		}
+
 		
 		\subsection{Extensions}
 		Table \ref{tab:extensions} presents the results of the extensions on the LoveDA-rural dataset. Style transfer preprocessing improved the mIoU slightly compared to the baseline but was less effective than data augmentation or domain adaptation techniques. BiSeNetV1 and LinkNet showed competitive performance, with BiSeNetV1 outperforming PIDNet-S on the target domain.
 		
-		\begin{table}[h]
+
 			\centering
 			\caption{Extensions on LoveDA-Rural (Target Domain)}
 			\label{tab:extensions}
@@ -108,7 +120,7 @@
 				BiSeNetV1 & 32.21 \\ \hline
 				LinkNet & 30.43 \\ \hline
 			\end{tabular}
-		\end{table}
+
 		
 		\section{Conclusion}
 		This work demonstrates PIDNet's effectiveness for real-time semantic segmentation on the LoveDA-urban dataset (288ms latency, 48.67\% mIoU) and quantifies the domain shift effect when applied to LoveDA-rural (23.98\% mIoU). Data augmentation, particularly photometric transforms (A2), provided the most consistent improvement (+6.82\% mIoU), while adversarial training and DACS showed moderate gains (+6.61\% and +6.65\% mIoU, respectively). Extensions with alternative models highlighted PIDNet's superior speed-accuracy balance, although BiSeNetV1 performed slightly better on the target domain. Future work could explore hybrid adaptation strategies, optimized style transfer pipelines, and the combination of DACS and adversarial training for further performance enhancements.
