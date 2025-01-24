@@ -5,6 +5,7 @@
 \usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage{graphicx}
+\usepackage{ragged2e}
 
 \title{Real-time Domain Adaptation in Semantic Segmentation}
 \author{Attrovio Mario, Ghisolfo Giorgia, Russo Michele}
@@ -139,6 +140,7 @@
 
 		
 		\subsection{Extensions}
+		\justifying
 		Table \ref{tab:extensions} presents the results of the extensions on the LoveDA-rural dataset. Style transfer preprocessing improved the mIoU slightly compared to the baseline but was less effective than data augmentation or domain adaptation techniques. BiSeNetV1 and LinkNet showed competitive performance, with BiSeNetV1 outperforming PIDNet-S on the target domain.
 		
 
@@ -162,6 +164,7 @@
 			\item \textbf{Latency-Accuracy Trade-off}: PIDNet-S prioritizes inference speed (288ms) over pure accuracy, while DeepLabV2-based implementations ignore latency constraints (typically >1,000ms).
 		\end{itemize}
 		
+		\justifying
 		These results highlight the inherent challenge of balancing domain adaptation performance with real-time requirements—a critical consideration for edge deployment scenarios.
 		
 
@@ -180,6 +183,7 @@
 		}
 
 		\section{Conclusion}
+		\justifying
 		This work demonstrates PIDNet's effectiveness for real-time semantic segmentation on the LoveDA-urban dataset (288ms latency, 48.67\% mIoU) and quantifies the domain shift effect when applied to LoveDA-rural (23.98\% mIoU). Data augmentation, particularly photometric transforms (A2), provided the most consistent improvement (+6.82\% mIoU), while adversarial training and DACS showed moderate gains (+6.61\% and +6.65\% mIoU, respectively). Extensions with alternative models highlighted PIDNet's superior speed-accuracy balance, although BiSeNetV1 performed slightly better on the target domain. Future work could explore hybrid adaptation strategies, optimized style transfer pipelines, and the combination of DACS and adversarial training for further performance enhancements.
 		
 	\end{multicols}

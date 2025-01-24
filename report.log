@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.22)  24 JAN 2025 16:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.22)  24 JAN 2025 16:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -311,6 +311,23 @@ File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 \Gin@req@height=\dimen175
 \Gin@req@width=\dimen176
 )
+(C:\Users\Mario\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty
+Package: ragged2e 2023/06/22 v3.6 ragged2e Package
+\CenteringLeftskip=\skip53
+\RaggedLeftLeftskip=\skip54
+\RaggedRightLeftskip=\skip55
+\CenteringRightskip=\skip56
+\RaggedLeftRightskip=\skip57
+\RaggedRightRightskip=\skip58
+\CenteringParfillskip=\skip59
+\RaggedLeftParfillskip=\skip60
+\RaggedRightParfillskip=\skip61
+\JustifyingParfillskip=\skip62
+\CenteringParindent=\skip63
+\RaggedLeftParindent=\skip64
+\RaggedRightParindent=\skip65
+\JustifyingParindent=\skip66
+)
 (C:\Users\Mario\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
@@ -319,24 +336,24 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 ) (report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -372,7 +389,7 @@ LaTeX Font Info:    ... okay on input line 12.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 12.
+Package hyperref Info: Link coloring OFF on input line 13.
 (report.out) (report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
@@ -404,24 +421,24 @@ fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 14.
+(Font)              <12> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 14.
+(Font)              <8> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 14.
+(Font)              <6> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 22.
+(Font)              <7> on input line 23.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 22.
+(Font)              <5> on input line 23.
  [1
 
 {C:/Users/Mario/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
-LaTeX Warning: Reference `fig:scale' on page 2 undefined on input line 72.
+LaTeX Warning: Reference `fig:scale' on page 2 undefined on input line 73.
 
 [2]
 
-LaTeX Warning: Reference `fig:class_dist' on page 3 undefined on input line 73.
+LaTeX Warning: Reference `fig:class_dist' on page 3 undefined on input line 74.
 
 
 
@@ -447,7 +464,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.103 			\caption
+l.104 			\caption
                  {Performance on LoveDA-Urban (Source Domain)}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -459,15 +476,15 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.125 			\caption
+l.126 			\caption
                  {Domain Shift: Urban $\rightarrow$ Rural}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 125.
+(Font)              <9> on input line 126.
 
-Overfull \hbox (5.0032pt too wide) in paragraph at lines 125--139
+Overfull \hbox (5.0032pt too wide) in paragraph at lines 126--140
  [][] 
  []
 
@@ -478,7 +495,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.146 			\caption
+l.148 			\caption
                  {Extensions on LoveDA-Rural (Target Domain)}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -490,13 +507,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.169 			\caption
+l.172 			\caption
                  {Comparison with Original UDA Paper Results (LoveDA-Rural)}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (5.0069pt too wide) in paragraph at lines 169--181
+Overfull \hbox (5.0069pt too wide) in paragraph at lines 172--184
  [][] 
  []
 
@@ -509,17 +526,14 @@ L3 programming layer <2024-01-04>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 972145998EE68BE810F752C4F81FC108;2694.
  ) 
 Here is how much of TeX's memory you used:
- 9187 strings out of 474486
- 145457 string characters out of 5743755
+ 9274 strings out of 474486
+ 147394 string characters out of 5743755
  1956542 words of memory out of 5000000
- 31336 multiletter control sequences out of 15000+600000
+ 31419 multiletter control sequences out of 15000+600000
  564730 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,8n,79p,1023b,678s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -542,7 +556,7 @@ e1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Mario/AppData/Local/Programs/
 MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Mario/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (4 pages, 250994 bytes).
+Output written on report.pdf (4 pages, 251030 bytes).
 PDF statistics:
  233 PDF objects out of 1000 (max. 8388607)
  36 named destinations out of 1000 (max. 500000)
