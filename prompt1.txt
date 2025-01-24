@@ -1,3 +1,6 @@
+take the following latex report for aml project and complete it based on our work
+
+this is the original report:
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{multicol}
@@ -64,37 +67,6 @@
 		These models were chosen for their efficiency and different architectural designs, providing a comparison to PIDNet.
 		
 		\section{Experimental Results}
-		\subsection{LoveDA Dataset}  
-		The LoveDA dataset \cite{loveda2021} is a high-resolution (0.3 m) remote sensing dataset designed for domain-adaptive semantic segmentation in urban and rural environments. It contains 5,987 images across three Chinese cities (Nanjing, Changzhou, Wuhan), annotated with seven classes: *background*, *building*, *road*, *water*, *barren*, *forest*, and *agriculture*. The dataset is explicitly divided into urban (2,522 images) and rural (3,465 images) domains to study domain shift challenges.  
-		
-		Key characteristics of LoveDA include:  
-		\begin{itemize}  
-			\item \textbf{Multi-scale Objects}: Urban scenes feature densely packed buildings and structured roads, while rural areas contain scattered agricultural plots and irregular water bodies. Buildings in urban regions exhibit larger size variance compared to rural regions (Figure \ref{fig:scale}).  
-			\item \textbf{Complex Backgrounds}: The *background* class dominates both domains (Figure \ref{fig:class_dist}), encompassing diverse elements like vehicles and undeveloped land, which introduces high intra-class variance.  
-			\item \textbf{Domain Shift}: Urban and rural domains exhibit divergent class distributions (e.g., urban has 32\% buildings vs. rural’s 8\%) and spectral properties (lower variance in rural areas due to homogeneous landscapes).  
-		\end{itemize}  
-		
-		\begin{figure}[ht]  
-			\centering  
-
-			\caption{Class distribution differences between urban and rural domains in LoveDA. Buildings dominate urban areas, while agriculture is prevalent in rural regions.}  
-			\label{fig:class_dist}  
-		\end{figure}  
-		
-		For domain adaptation experiments, LoveDA provides two tasks:  
-		\begin{enumerate}  
-			\item \textbf{Urban $\rightarrow$ Rural}: Train on urban data (Qinhuai, Qixia, Jianghan, Gulou) and test on rural (Jiangning, Xinbei, Liyang).  
-			\item \textbf{Rural $\rightarrow$ Urban}: Train on rural data (Pukou, Lishui, Gaochun, Jiangxia) and test on urban (Jiangye, Wuchang, Wujin).  
-		\end{enumerate}  
-		
-		The dataset’s inherent challenges—scale variation, background complexity, and domain-specific class imbalances—make it a rigorous benchmark for evaluating real-time domain adaptation methods.  
-		
-		\begin{figure}[ht]  
-			\centering  
-
-			\caption{Scale differences in building sizes between urban (Jianye) and rural (Lishui) regions. Urban buildings exhibit greater size variability.}  
-			\label{fig:scale}  
-		\end{figure}
 		\subsection{Performance on Source Domain}
 		Table \ref{tab:urban} shows the performance of DeepLabV2 and PIDNet-S on the LoveDA-urban dataset (source domain). PIDNet-S, designed for real-time performance, achieved a significantly higher mIoU than DeepLabV2 while also providing latency, FLOPs, and parameter count.
 		
@@ -152,32 +124,7 @@
 				LinkNet & 30.43 \\ \hline
 			\end{tabular}
 
-		\subsection{Comparison with Original UDA Paper Results}
-		Table \ref{tab:uda_comparison} compares our domain adaptation results with those reported in the original DACS paper \cite{tranheden2021dacs} and LoveDA benchmarks \cite{loveda2021}. While DACS achieved 39.10\% mIoU on LoveDA-rural in the original implementation, our PIDNet-S adaptation reached only 30.63\%. Similarly, adversarial training underperformed compared to Tsai et al. \cite{tsai2018learning} (30.59\% vs. 35.20\%). Three key factors explain these differences:
 		
-		\begin{itemize}
-			\item \textbf{Model Architecture}: The original DACS paper used DeepLabV2 with ResNet-101, which has significantly higher capacity (44.5M params) compared to our real-time PIDNet-S (7.72M params). This architectural difference directly impacts feature representation power.
-			\item \textbf{Training Constraints}: Our experiments used a fixed 20-epoch training schedule to maintain real-time deployment capabilities, whereas the original works employed longer training (50+ epochs) with extensive hyperparameter tuning.
-			\item \textbf{Latency-Accuracy Trade-off}: PIDNet-S prioritizes inference speed (288ms) over pure accuracy, while DeepLabV2-based implementations ignore latency constraints (typically >1,000ms).
-		\end{itemize}
-		
-		These results highlight the inherent challenge of balancing domain adaptation performance with real-time requirements—a critical consideration for edge deployment scenarios.
-		
-
-			\centering
-			\caption{Comparison with Original UDA Paper Results (LoveDA-Rural)}
-			\label{tab:uda_comparison}
-			\resizebox{0.5\textwidth}{!}{%
-			\begin{tabular}{|l|l|c|c|}
-				\hline
-				Method & Model & mIoU (\%) & Latency (ms) \\ \hline
-				DACS (Original) \cite{tranheden2021dacs} & DeepLabV2 + ResNet-101 & 39.10 & 1,200 \\ \hline
-				DACS (Ours) & PIDNet-S & 30.63 & 288 \\ \hline
-				Adv. Training (Original) \cite{tsai2018learning} & DeepLabV2 + VGG16 & 35.20 & 850 \\ \hline
-				Adv. Training (Ours) & PIDNet-S & 30.59 & 288 \\ \hline
-			\end{tabular}%
-		}
-
 		\section{Conclusion}
 		This work demonstrates PIDNet's effectiveness for real-time semantic segmentation on the LoveDA-urban dataset (288ms latency, 48.67\% mIoU) and quantifies the domain shift effect when applied to LoveDA-rural (23.98\% mIoU). Data augmentation, particularly photometric transforms (A2), provided the most consistent improvement (+6.82\% mIoU), while adversarial training and DACS showed moderate gains (+6.61\% and +6.65\% mIoU, respectively). Extensions with alternative models highlighted PIDNet's superior speed-accuracy balance, although BiSeNetV1 performed slightly better on the target domain. Future work could explore hybrid adaptation strategies, optimized style transfer pipelines, and the combination of DACS and adversarial training for further performance enhancements.
 		
@@ -187,3 +134,8 @@
 	\bibliography{references}
 	
 \end{document}
+
+
+write only 5.6 subchapter about comparison with paper uda results (with tabular comparison) and explain why different results 
+
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.22)  24 JAN 2025 01:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.22)  24 JAN 2025 16:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -417,32 +417,55 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 {C:/Users/Mario/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
-! LaTeX Error: \caption outside float.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.72 			\caption
-                {Performance on LoveDA-Urban (Source Domain)}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: Reference `fig:scale' on page 2 undefined on input line 72.
 
 [2]
 
+LaTeX Warning: Reference `fig:class_dist' on page 3 undefined on input line 73.
+
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
 ! LaTeX Error: \caption outside float.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.93 			\caption
-                {Domain Shift: Urban $\rightarrow$ Rural}
+l.103 			\caption
+                 {Performance on LoveDA-Urban (Source Domain)}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (5.01146pt too wide) in paragraph at lines 93--107
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.124 			\caption
+                 {Domain Shift: Urban $\rightarrow$ Rural}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (5.01146pt too wide) in paragraph at lines 124--138
  [][] 
  []
 
@@ -453,46 +476,69 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.114 			\caption
+l.145 			\caption
                  {Extensions on LoveDA-Rural (Target Domain)}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-(report.bbl) [3] (report.aux)
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.168 			\caption
+                 {Comparison with Original UDA Paper Results (LoveDA-Rural)}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (5.00414pt too wide) in paragraph at lines 168--180
+ [][] 
+ []
+
+(report.bbl [3]) [4] (report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 79737D48FFBCB875150C21998A33FDCB;2280.
+(rerunfilecheck)             Checksum: 972145998EE68BE810F752C4F81FC108;2694.
  ) 
 Here is how much of TeX's memory you used:
- 9161 strings out of 474486
- 145094 string characters out of 5743755
- 1951542 words of memory out of 5000000
- 31320 multiletter control sequences out of 15000+600000
- 563173 words of font info for 53 fonts, out of 8000000 for 9000
+ 9180 strings out of 474486
+ 145388 string characters out of 5743755
+ 1980542 words of memory out of 5000000
+ 31332 multiletter control sequences out of 15000+600000
+ 563821 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,7n,79p,1023b,651s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,79p,1023b,678s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1000.pk><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmbx10.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Mario/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mario/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Mario/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Mar
-io/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Us
-ers/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmsy5.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmsy7.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmti10.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (3 pages, 208313 bytes).
+0500.pk> <C:\Users\Mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\tcrm1000.pk><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmbx5.pfb><C:/Users/Mario/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Mario/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Mario/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mari
+o/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Us
+ers/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb
+><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr7.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmsy5.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Mario/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on report.pdf (4 pages, 232871 bytes).
 PDF statistics:
- 197 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
- 137 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 228 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
+ 153 words of extra memory for PDF output out of 10000 (max. 10000000)
 
