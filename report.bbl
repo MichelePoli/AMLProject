@@ -21,6 +21,11 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{tranheden2021dacs}
+W.~Tranheden, V.~Olsson, J.~Pinto, and L.~Svensson, ``Dacs: Domain adaptation
+  via cross-domain mixed sampling,'' \emph{Proceedings of the IEEE/CVF Winter
+  Conference on Applications of Computer Vision}, pp. 1479--1489, 2021.
+
 \bibitem{loveda2021}
 \BIBentryALTinterwordspacing
 J.~Wang, Z.~Zheng, A.~Ma, X.~Lu, and Y.~Zhong, ``Loveda: {A} remote sensing
@@ -57,11 +62,6 @@ Y.-H. Tsai, W.-C. Hung, S.~Schulter, K.~Sohn, M.-H. Yang, and M.~Chandraker,
   ``Learning to adapt structured output space for semantic segmentation,''
   \emph{Proceedings of the IEEE conference on computer vision and pattern
   recognition}, pp. 7472--7481, 2018.
-
-\bibitem{tranheden2021dacs}
-W.~Tranheden, V.~Olsson, J.~Pinto, and L.~Svensson, ``Dacs: Domain adaptation
-  via cross-domain mixed sampling,'' \emph{Proceedings of the IEEE/CVF Winter
-  Conference on Applications of Computer Vision}, pp. 1479--1489, 2021.
 
 \bibitem{chaurasia2017linknet}
 A.~Chaurasia and E.~Culurciello, ``Linknet: Exploiting encoder representations

@@ -19,7 +19,7 @@
 | **Model**           | **Dataset**       | **Training Epochs** | **mIoU (%)** | **Latency** | **FLOPs** | **Params** |
 |----------------------|-------------------|------------|--------------|-------------|-----------|------------|
 | DeepLabV2      **B4**     | LoveDA-urban     | 20         | 0.3217          |16.42 ms       |  11.535G       | 62.231M        |
-| DeepLabV2      **B16**     | LoveDA-urban     | 20         |0.3440         | 96.91 ms        |  11.535G       | 62.231M        |
+| DeepLabV2      **B16**     | LoveDA-urban     | 20         |0.3342        | 13.42 ms        |  11.535G       | 62.231M        |
 | PIDNet (Real-time) **B2** | LoveDA-urban     | 20         | 0.3590         | 17.43 ms        | 6.346G      | 7.718M       |
 | PIDNet (Real-time) **B16** | LoveDA-urban     | 20         | 0.4867         | 288.70 ms        | 6.346G      | 7.718M       |
 

@@ -6,6 +6,8 @@
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{ragged2e}
+\usepackage{graphicx}
+
 
 \title{Real-time Domain Adaptation in Semantic Segmentation}
 \author{Attrovio Mario, Ghisolfo Giorgia, Russo Michele}
@@ -20,19 +22,45 @@
 		
 		
 		\section{Abstract}
-		Semantic segmentation is a critical task in computer vision, enabling pixel-wise classification of images. However, the performance of segmentation models often degrades when applied to data from different domains, a challenge known as domain shift. This report explores real-time semantic segmentation in the context of domain adaptation using PIDNet as the backbone. We investigate the performance drop caused by domain shift between urban and rural datasets and evaluate mitigation strategies, including data augmentation and advanced domain adaptation techniques like adversarial training and image-to-image translation (DACS). Experimental results on the LoveDA dataset demonstrate that these methods significantly reduce the impact of domain shift while maintaining real-time inference capabilities, achieving a balanced trade-off between accuracy and computational efficiency. The code can be found on our project website: \url{https://github.com/MichelePoli/AMLProject}.
+		Semantic segmentation is a critical task in computer vision, enabling pixel-wise classification of images. However, the performance of segmentation models often degrades when applied to data from different domains, a challenge known as domain shift. This report explores real-time semantic segmentation in the context of domain adaptation using PIDNet as the backbone. We investigate the performance drop caused by domain shift between urban and rural datasets and evaluate mitigation strategies, including data augmentation and advanced domain adaptation techniques like adversarial training and image-to-image translation (DACS)\cite{tranheden2021dacs}. Experimental results on the LoveDA dataset \cite{loveda2021} demonstrate that these methods reduce the impact of domain shift while maintaining real-time inference capabilities, achieving a balanced trade-off between accuracy and computational efficiency. The code can be found on our project website: \url{https://github.com/MichelePoli/AMLProject}.
 		
 		\section{Introduction}
 		Semantic segmentation is a foundational task in computer vision, where each pixel in an image is assigned a label corresponding to a predefined class. It plays a vital role in applications such as autonomous driving, medical imaging, and remote sensing. Recent advancements in deep learning have yielded high-performing models, but these often struggle with domain shift—a phenomenon where a model trained on a source domain (e.g., urban images) performs poorly on a target domain (e.g., rural images) \cite{loveda2021}. Addressing this challenge is crucial for real-world deployments where annotated data for all target domains is scarce or unavailable.
 		
 		Domain adaptation aims to bridge this performance gap by aligning the source and target domains without requiring extensive labeled data from the target domain. While several methods exist, real-time semantic segmentation introduces additional constraints, such as maintaining high inference speed and low computational cost. PIDNet \cite{pidnet2023}, a real-time segmentation network inspired by Proportional-Integral-Derivative (PID) controllers, serves as the backbone for our study due to its efficiency and accuracy in real-time tasks.
 		
-		This report focuses on evaluating and improving the performance of PIDNet for domain-adaptive semantic segmentation using the LoveDA dataset \cite{loveda2021}. We first quantify the performance degradation caused by domain shift. Next, we implement data augmentation techniques and two domain adaptation approaches—adversarial training and image-to-image translation (DACS)—to mitigate this issue. Our findings highlight the potential of these methods to enhance generalization while preserving the real-time capabilities of the model.
+		This report focuses on evaluating and improving the performance of PIDNet for domain-adaptive semantic segmentation using the LoveDA dataset \cite{loveda2021}. We first quantify the performance degradation caused by domain shift. Next, we implement data augmentation techniques and two domain adaptation approaches—adversarial training and image-to-image translation (DACS)\cite{tranheden2021dacs} —to mitigate this issue. Our findings highlight the potential of these methods to enhance generalization while preserving the real-time capabilities of the model.
 		
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.8\linewidth]{image/urban_1.png}
+			\caption{Una descrizione dell'immagine.}
+			\label{fig:urban_image}
+		  \end{figure}
+
+
+
+
+
 		\section{Related Work}
-		Semantic segmentation has evolved significantly with deep learning. Fully Convolutional Networks (FCNs) \cite{long2015fcn} pioneered end-to-end segmentation by replacing fully connected layers with convolutional ones, enabling the network to process images of arbitrary sizes and produce pixel-wise predictions. DeepLabV2 \cite{chen2018deeplab} introduced atrous convolutions, which expand the receptive field without increasing the number of parameters, allowing for multi-scale context aggregation. Real-time networks like BiSeNet \cite{yu2018bisenet} optimized speed-accuracy trade-offs using lightweight backbones and parallel structures, while PIDNet \cite{pidnet2023} further improved efficiency by mimicking PID controllers to balance high-, mid-, and low-level features.
+		Semantic segmentation has evolved significantly with deep learning. 
+		\\
+		\\
+		\textbf{Foundational Architectures}
+		Semantic segmentation's deep learning era began with the introduction of Fully Convolutional Networks (FCNs) \cite{long2015fcn}. By replacing fully connected layers with convolutional ones, FCNs enabled end-to-end segmentation, capable of handling images of arbitrary sizes and providing pixel-wise predictions. This innovation laid the groundwork for modern segmentation models.
+		Further advancements were introduced with DeepLabV2 \cite{chen2018deeplab}, which leveraged atrous (or dilated) convolutions. Atrous convolutions expanded the receptive field without increasing the number of parameters, making it possible to aggregate multi-scale contextual information efficiently.
+		\\
+		\\
+		\textbf{Real-Time Efficiency}
+		Real-time semantic segmentation requires optimizing the balance between accuracy and computational efficiency. BiSeNet \cite{yu2018bisenet} introduced lightweight backbones and parallel structures, achieving an effective speed-accuracy trade-off. This architecture focused on enhancing real-time processing capabilities for applications with strict latency requirements. PIDNet \cite{pidnet2023} further pushed the boundaries of efficiency by adopting principles from PID (Proportional-Integral-Derivative) controllers. The model effectively balanced high-, mid-, and low-level features, offering improvements in both speed and segmentation quality.
+		\\
+		\\
+		\textbf{Domain Adaptation Techniques}
+		Semantic segmentation models often suffer performance degradation when applied across different domains (e.g., urban vs. rural settings). To address this, various domain adaptation techniques have been developed two main method. Adversarial Methods \cite{tsai2018learning}: these approaches train a discriminator to differentiate between source and target domain features. By doing so, the feature extractor is encouraged to generate domain-invariant representations, improving generalization. Image-to-Image Translation: Methods like DACS \cite{tranheden2021dacs} blend domains by leveraging mixed sampling techniques. This strategy generates pseudo-labeled target domain images, enhancing the model's ability to generalize across domains.
+		Additionally, the introduction of the LoveDA dataset \cite{loveda2021} provided a benchmark specifically designed for domain adaptation in remote sensing. With urban and rural splits, LoveDA poses a challenging scenario, advancing research in this field.
+
 		
-		Domain adaptation techniques address performance degradation across domains. Adversarial methods \cite{tsai2018learning} train a discriminator to distinguish between source and target domain features, encouraging the feature extractor to produce domain-invariant representations. Image-to-image translation approaches like DACS \cite{tranheden2021dacs} blend domains through mixed sampling, generating pseudo-labeled target domain images to improve model generalization. The LoveDA dataset \cite{loveda2021} provided urban/rural splits to benchmark these methods in remote sensing, offering a challenging scenario for domain adaptation research.
 		
 \section{Methods}
 \subsection{Baseline Model Development}
@@ -187,13 +215,8 @@ This single-stage approach achieves domain invariance by directly matching the s
 		Table \ref{tab:urban} shows the performance of DeepLabV2 and PIDNet-S on the LoveDA-urban dataset (source domain). PIDNet-S, designed for real-time performance, achieved a significantly higher mIoU than DeepLabV2 while also providing latency, FLOPs, and parameter count.
 		\begin{center} 
 			\vspace{2cm}
-<<<<<<< HEAD
-			\centering
-			%\caption{Performance on LoveDA-Urban (Source Domain)}
-=======
 			
 				% \caption{Performance on LoveDA-Urban (Source Domain)}
->>>>>>> a57ae2259e6a0623b3bba28285b5e448c5496e2b
 			\label{tab:urban}
 			
 			\tiny
@@ -220,12 +243,6 @@ This single-stage approach achieves domain invariance by directly matching the s
 			\label{tab:shift}
 		
 
-<<<<<<< HEAD
-			\centering
-			%\caption{Domain Shift: Urban $\rightarrow$ Rural}
-			\label{tab:shift}
-=======
->>>>>>> a57ae2259e6a0623b3bba28285b5e448c5496e2b
 	 		\resizebox{0.5\textwidth}{!}{%
 			\begin{tabular}{|l|c|c|c|c|c|c|c|}
 						\hline
@@ -246,13 +263,8 @@ This single-stage approach achieves domain invariance by directly matching the s
 		Table \ref{tab:extensions} presents the results of the extensions on the LoveDA-rural dataset. Style transfer preprocessing improved the mIoU slightly compared to the baseline but was less effective than data augmentation or domain adaptation techniques. BiSeNetV1 and LinkNet showed competitive performance, with BiSeNetV1 outperforming PIDNet-S on the target domain.
 		\begin{center}
 
-<<<<<<< HEAD
-			\centering
-			%\caption{Extensions on LoveDA-Rural (Target Domain)}
-=======
 			% \centering
 			% \caption{Extensions on LoveDA-Rural (Target Domain)}
->>>>>>> a57ae2259e6a0623b3bba28285b5e448c5496e2b
 			\label{tab:extensions}
 			\begin{tabular}{|l|c|}
 				\hline
@@ -275,15 +287,9 @@ This single-stage approach achieves domain invariance by directly matching the s
 		\justifying
 		These results highlight the inherent challenge of balancing domain adaptation performance with real-time requirements—a critical consideration for edge deployment scenarios.
 		
-<<<<<<< HEAD
-
-			\centering
-			%\caption{Comparison with Original UDA Paper Results (LoveDA-Rural)}
-=======
 		\begin{center}
 			% \centering
 			% \caption{Comparison with Original UDA Paper Results (LoveDA-Rural)}
->>>>>>> a57ae2259e6a0623b3bba28285b5e448c5496e2b
 			\label{tab:uda_comparison}
 			\resizebox{0.5\textwidth}{!}{%
 			\begin{tabular}{|l|l|c|c|}
@@ -299,7 +305,23 @@ This single-stage approach achieves domain invariance by directly matching the s
 
 		\section{Conclusion}
 		\justifying
-		This work demonstrates PIDNet's effectiveness for real-time semantic segmentation on the LoveDA-urban dataset (288ms latency, 48.67\% mIoU) and quantifies the domain shift effect when applied to LoveDA-rural (23.98\% mIoU). Data augmentation, particularly photometric transforms (A2), provided the most consistent improvement (+6.82\% mIoU), while adversarial training and DACS showed moderate gains (+6.61\% and +6.65\% mIoU, respectively). Extensions with alternative models highlighted PIDNet's superior speed-accuracy balance, although BiSeNetV1 performed slightly better on the target domain. Future work could explore hybrid adaptation strategies, optimized style transfer pipelines, and the combination of DACS and adversarial training for further performance enhancements.
+
+
+		This study highlights the effectiveness of PIDNet for real-time semantic segmentation, achieving a strong performance on the LoveDA-urban dataset (288ms latency, 48.67\% mIoU). However, the impact of domain shift, as observed on LoveDA-rural (23.98\% mIoU), underscores the challenges of applying segmentation models across divergent environments. Among the evaluated mitigation strategies, photometric data augmentation (A2) showed the most consistent improvement (+6.82\% mIoU), while adversarial training and DACS offered moderate yet comparable gains (+6.61\% and +6.65\% mIoU, respectively). Despite these advancements, the trade-off between accuracy and computational efficiency remains a key limitation, particularly in edge computing scenarios. 
+		\\
+		Our experiments demonstrate that while PIDNet excels in maintaining real-time capabilities, alternative architectures like BiSeNetV1 can surpass it in domain-adaptive accuracy, at a slight cost to speed. These findings suggest that a hybrid approach, integrating the efficiency of PIDNet with enhanced feature representation techniques from other models, could be a promising direction.
+		Future research could focus on:
+
+		\begin{enumerate}
+			\item \textbf {Hybrid Adaptation Strategies}: Combining DACS with adversarial training or exploring ensemble techniques to synergize their strengths.
+			\item \textbf {Optimized Style Transfer Pipelines}: Refining preprocessing steps to reduce the spectral and textural differences between domains.
+			\item \textbf {Domain-Specific Fine-Tuning}: Introducing lightweight domain-specific adaptations during deployment to address localized variations.
+			\item \textbf {Longer Training Regimes}: Exploring optimized training schedules that balance performance improvements with real-time constraints.
+		\end{enumerate}
+		
+		Ultimately, this work provides a foundation for advancing domain-adaptive real-time semantic segmentation, offering practical insights for deploying robust models in dynamic, real-world environments where domain variability is unavoidable.
+		
+
 		
 	\end{multicols}
 	

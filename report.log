@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.22)  28 JAN 2025 02:18
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.22)  27 JAN 2025 16:48
->>>>>>> a57ae2259e6a0623b3bba28285b5e448c5496e2b
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.22)  28 JAN 2025 11:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -286,24 +282,24 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 ) (report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -339,7 +335,7 @@ LaTeX Font Info:    ... okay on input line 13.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 13.
+Package hyperref Info: Link coloring OFF on input line 15.
 (report.out) (report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
@@ -364,42 +360,55 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 15.
+(Font)              <12> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 15.
+(Font)              <8> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 15.
+(Font)              <6> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 23.
+(Font)              <7> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 23.
- [1
+(Font)              <5> on input line 25.
+<image/urban_1.png, id=94, 535.2497pt x 261.22594pt>
+File: image/urban_1.png Graphic file (type png)
+<use image/urban_1.png>
+Package pdftex.def Info: image/urban_1.png  used on input line 37.
+(pdftex.def)             Requested size: 189.47946pt x 92.47476pt.
 
-<<<<<<< HEAD
-{C:/Users/Mario/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 55--57
-=======
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+[1
+
 {C:/Users/user/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
->>>>>>> a57ae2259e6a0623b3bba28285b5e448c5496e2b
+Underfull \hbox (badness 10000) in paragraph at lines 83--85
 
  []
 
-[2]
+[2] [3]
 
-LaTeX Warning: Reference `fig:scale' on page 3 undefined on input line 157.
+LaTeX Warning: Reference `fig:scale' on page 4 undefined on input line 185.
 
 
-<<<<<<< HEAD
-LaTeX Warning: Reference `fig:class_dist' on page 3 undefined on input line 158
-.
-
-[3]
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-=======
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
->>>>>>> a57ae2259e6a0623b3bba28285b5e448c5496e2b
+LaTeX Warning: Reference `fig:class_dist' on page 4 undefined on input line 186.
 
 
 Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
@@ -408,37 +417,29 @@ Package multicol Warning: Floats and marginpars not allowed inside `multicols' e
 Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
 
 
-<<<<<<< HEAD
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 223.
+(Font)              <9> on input line 257.
 
-Overfull \hbox (5.0032pt too wide) in paragraph at lines 212--224
- [][] 
+Overfull \hbox (5.0032pt too wide) in paragraph at lines 246--258
+ [] 
  []
 
-
-Overfull \hbox (5.0069pt too wide) in paragraph at lines 258--268
- [][] 
-=======
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 145.
-
-Overfull \hbox (5.0032pt too wide) in paragraph at lines 134--146
+[4]
+Overfull \hbox (5.0069pt too wide) in paragraph at lines 294--304
  [] 
  []
 
 
-Overfull \hbox (5.0069pt too wide) in paragraph at lines 182--192
- [] 
->>>>>>> a57ae2259e6a0623b3bba28285b5e448c5496e2b
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
+[]\OT1/cmr/bx/n/9 Domain-Specific Fine-Tuning\OT1/cmr/m/n/9 : In-tro-duc-ing
  []
 
-[4] (report.bbl) [5] (report.aux)
+(report.bbl [5]) [6] (report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -451,50 +452,17 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 0AA71FB28AF141C7BF1C86A573A8538A;3422.
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 9286 strings out of 474486
- 147617 string characters out of 5743755
- 1957542 words of memory out of 5000000
- 31424 multiletter control sequences out of 15000+600000
+ 9300 strings out of 474485
+ 147766 string characters out of 5744206
+ 1953542 words of memory out of 5000000
+ 31432 multiletter control sequences out of 15000+600000
  564730 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,1023b,686s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-0900.pk> <C:\Users\Mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\tcrm1000.pk><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmbx10.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/Mario/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Mario/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Mario/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Mari
-o/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Us
-ers/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pf
-b><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmr5.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmr9.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Mario/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Mario/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (5 pages, 255128 bytes).
+ 75i,8n,79p,1124b,721s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on report.pdf (6 pages, 262436 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
- 169 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
- 9276 strings out of 474485
- 147346 string characters out of 5744206
- 1956542 words of memory out of 5000000
- 31420 multiletter control sequences out of 15000+600000
- 564730 words of font info for 58 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 75i,8n,79p,1096b,678s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (4 pages, 242272 bytes).
-PDF statistics:
- 228 PDF objects out of 1000 (max. 8388607)
- 36 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> a57ae2259e6a0623b3bba28285b5e448c5496e2b
+ 264 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 174 words of extra memory for PDF output out of 10000 (max. 10000000)
 
