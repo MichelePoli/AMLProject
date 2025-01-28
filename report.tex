@@ -160,10 +160,12 @@ This single-stage approach achieves domain invariance by directly matching the s
 		\end{itemize}  
 		
 		\begin{figure}[ht]  
-			\centering  
+			\begin{center}
 
 			\caption{Class distribution differences between urban and rural domains in LoveDA. Buildings dominate urban areas, while agriculture is prevalent in rural regions.}  
-			\label{fig:class_dist}  
+			\label{fig:class_dist} 
+			\end{center} 
+
 		\end{figure}  
 		
 		For domain adaptation experiments, LoveDA provides two tasks:  
@@ -175,18 +177,25 @@ This single-stage approach achieves domain invariance by directly matching the s
 		The dataset’s inherent challenges—scale variation, background complexity, and domain-specific class imbalances—make it a rigorous benchmark for evaluating real-time domain adaptation methods.  
 		
 		\begin{figure}[ht]  
-			\centering  
+			\begin{center} 
 
 			\caption{Scale differences in building sizes between urban (Jianye) and rural (Lishui) regions. Urban buildings exhibit greater size variability.}  
 			\label{fig:scale}  
+			\end{center} 
 		\end{figure}
 		\subsection{Performance on Source Domain}
 		Table \ref{tab:urban} shows the performance of DeepLabV2 and PIDNet-S on the LoveDA-urban dataset (source domain). PIDNet-S, designed for real-time performance, achieved a significantly higher mIoU than DeepLabV2 while also providing latency, FLOPs, and parameter count.
-		
+		\begin{center} 
 			\vspace{2cm}
+<<<<<<< HEAD
 			\centering
 			%\caption{Performance on LoveDA-Urban (Source Domain)}
+=======
+			
+				% \caption{Performance on LoveDA-Urban (Source Domain)}
+>>>>>>> a57ae2259e6a0623b3bba28285b5e448c5496e2b
 			\label{tab:urban}
+			
 			\tiny
 			\begin{tabular}{|l|c|c|c|c|}
 				\hline
@@ -195,6 +204,7 @@ This single-stage approach achieves domain invariance by directly matching the s
 				PIDNet-S & 48.67 & 288.70 & 6.35G & 7.72M \\ \hline
 			\end{tabular}
 				\vspace{0.2cm}
+		\end{center} 
 		
 		
 		
@@ -204,32 +214,45 @@ This single-stage approach achieves domain invariance by directly matching the s
 		\subsection{Domain Shift Evaluation}
 		\small
 		Table \ref{tab:shift} quantifies the domain shift from LoveDA-urban to LoveDA-rural. The baseline PIDNet-S model, trained on urban data, experienced a significant performance drop when tested on rural data. Data augmentations (A1 and A2) improved the mIoU, with A2 (photometric transforms) being the most effective. Adversarial training and DACS further mitigated the domain shift, achieving similar performance.
+		\begin{center}
+
+			% \caption{Domain Shift: Urban $\rightarrow$ Rural}
+			\label{tab:shift}
 		
 
+<<<<<<< HEAD
 			\centering
 			%\caption{Domain Shift: Urban $\rightarrow$ Rural}
 			\label{tab:shift}
+=======
+>>>>>>> a57ae2259e6a0623b3bba28285b5e448c5496e2b
 	 		\resizebox{0.5\textwidth}{!}{%
 			\begin{tabular}{|l|c|c|c|c|c|c|c|}
-				\hline
-				Model & Road & Building & Water & Barren & Forest & Agric. & mIoU \\ \hline
-				PIDNet & 16.34 & 23.99 & 35.46 & 3.12 & 8.83 & 31.82 & 23.98 \\ \hline
-				+ A1 & 29.33 & 40.77 & 36.71 & 9.17 & 9.53 & 33.13 & 29.91 \\ \hline
-				+ A2 & 31.41 & 38.37 & 31.33 & 10.26 & 15.10 & 37.51 & 30.80 \\ \hline
-				+ A1 + A2 & 27.92 & 32.97 & 33.98 & 10.50 & 10.69 & 37.45 & 29.35 \\ \hline
-				+ Adv. & 0.36 & 13.41 & 32.72 & 8.28 & 49.73 & 12.26 & 30.59 \\ \hline
-				+ DACS & 31.32 & 36.60 & 42.70 & 4.49 & 2.70 & 40.60 & 30.63 \\ \hline
-			\end{tabular}%
-		}
+						\hline
+						Model & Road & Building & Water & Barren & Forest & Agric. & mIoU \\ \hline
+						PIDNet & 16.34 & 23.99 & 35.46 & 3.12 & 8.83 & 31.82 & 23.98 \\ \hline
+						+ A1 & 29.33 & 40.77 & 36.71 & 9.17 & 9.53 & 33.13 & 29.91 \\ \hline
+						+ A2 & 31.41 & 38.37 & 31.33 & 10.26 & 15.10 & 37.51 & 30.80 \\ \hline
+						+ A1 + A2 & 27.92 & 32.97 & 33.98 & 10.50 & 10.69 & 37.45 & 29.35 \\ \hline
+						+ Adv. & 0.36 & 13.41 & 32.72 & 8.28 & 49.73 & 12.26 & 30.59 \\ \hline
+						+ DACS & 31.32 & 36.60 & 42.70 & 4.49 & 2.70 & 40.60 & 30.63 \\ \hline
+					\end{tabular}%
+				}
+		\end{center} 
 
 		
 		\subsection{Extensions}
 		\justifying
 		Table \ref{tab:extensions} presents the results of the extensions on the LoveDA-rural dataset. Style transfer preprocessing improved the mIoU slightly compared to the baseline but was less effective than data augmentation or domain adaptation techniques. BiSeNetV1 and LinkNet showed competitive performance, with BiSeNetV1 outperforming PIDNet-S on the target domain.
-		
+		\begin{center}
 
+<<<<<<< HEAD
 			\centering
 			%\caption{Extensions on LoveDA-Rural (Target Domain)}
+=======
+			% \centering
+			% \caption{Extensions on LoveDA-Rural (Target Domain)}
+>>>>>>> a57ae2259e6a0623b3bba28285b5e448c5496e2b
 			\label{tab:extensions}
 			\begin{tabular}{|l|c|}
 				\hline
@@ -238,6 +261,7 @@ This single-stage approach achieves domain invariance by directly matching the s
 				BiSeNetV1 & 32.21 \\ \hline
 				LinkNet & 30.43 \\ \hline
 			\end{tabular}
+		\end{center} 
 
 		\subsection{Comparison with Original UDA Paper Results}
 		Table \ref{tab:uda_comparison} compares our domain adaptation results with those reported in the original DACS paper \cite{tranheden2021dacs} and LoveDA benchmarks \cite{loveda2021}. While DACS achieved 39.10\% mIoU on LoveDA-rural in the original implementation, our PIDNet-S adaptation reached only 30.63\%. Similarly, adversarial training underperformed compared to Tsai et al. \cite{tsai2018learning} (30.59\% vs. 35.20\%). Three key factors explain these differences:
@@ -251,9 +275,15 @@ This single-stage approach achieves domain invariance by directly matching the s
 		\justifying
 		These results highlight the inherent challenge of balancing domain adaptation performance with real-time requirements—a critical consideration for edge deployment scenarios.
 		
+<<<<<<< HEAD
 
 			\centering
 			%\caption{Comparison with Original UDA Paper Results (LoveDA-Rural)}
+=======
+		\begin{center}
+			% \centering
+			% \caption{Comparison with Original UDA Paper Results (LoveDA-Rural)}
+>>>>>>> a57ae2259e6a0623b3bba28285b5e448c5496e2b
 			\label{tab:uda_comparison}
 			\resizebox{0.5\textwidth}{!}{%
 			\begin{tabular}{|l|l|c|c|}
@@ -265,6 +295,7 @@ This single-stage approach achieves domain invariance by directly matching the s
 				Adv. Training (Ours) & PIDNet-S & 30.59 & 288 \\ \hline
 			\end{tabular}%
 		}
+		\end{center} 
 
 		\section{Conclusion}
 		\justifying
