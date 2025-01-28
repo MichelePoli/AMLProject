@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage{ragged2e}
 \usepackage{graphicx}
+\usepackage{float}
 
 
 \title{Real-time Domain Adaptation in Semantic Segmentation}
@@ -32,7 +33,7 @@
 		This report focuses on evaluating and improving the performance of PIDNet for domain-adaptive semantic segmentation using the LoveDA dataset \cite{loveda2021}. We first quantify the performance degradation caused by domain shift. Next, we implement data augmentation techniques and two domain adaptation approaches—adversarial training and image-to-image translation (DACS)\cite{tranheden2021dacs} —to mitigate this issue. Our findings highlight the potential of these methods to enhance generalization while preserving the real-time capabilities of the model.
 		
 		
-		\begin{figure}[h]
+		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.8\linewidth]{image/urban_1.png}
 			\caption{Una descrizione dell'immagine.}
