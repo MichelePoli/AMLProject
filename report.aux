@@ -17,9 +17,13 @@
 \citation{loveda2021}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Abstract}{1}{section.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2}Introduction}{1}{section.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Satellite imagery (left) and its segmented land-use classification map (right) of an urban area}}{1}{figure.1}\protected@file@percent }
+\newlabel{fig:urban_image}{{1}{1}{Satellite imagery (left) and its segmented land-use classification map (right) of an urban area}{figure.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Related Work}{1}{section.3}\protected@file@percent }
 \citation{chen2018deeplab}
 \citation{pidnet2023}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces  The analogy between PID controller and proposed network}}{2}{figure.2}\protected@file@percent }
+\newlabel{fig:PIDNET_image}{{2}{2}{The analogy between PID controller and proposed network}{figure.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Methods}{2}{section.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Baseline Model Development}{2}{subsection.4.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}2a Classic Segmentation Architecture }{2}{subsubsection.4.1.1}\protected@file@percent }
@@ -27,34 +31,41 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3}PIDNet Architecture Details}{2}{subsubsection.4.1.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}3a Domain Adaptation }{2}{subsection.4.2}\protected@file@percent }
 \newlabel{subsec:domain_shift}{{4.2}{2}{3a Domain Adaptation}{subsection.4.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Domain Adaptation challenges}{2}{subsubsection.4.2.1}\protected@file@percent }
 \citation{tsai2018learning}
 \citation{tranheden2021dacs}
-\citation{yu2018bisenet}
-\citation{chaurasia2017linknet}
-\citation{fan2021rethinking}
-\citation{loveda2021}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Domain Adaptation challenges}{3}{subsubsection.4.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}3b Data Augmentation}{3}{subsection.4.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Unsupervised Domain Adaptation}{3}{subsection.4.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Phase 1: Source Domain training}{3}{section*.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Phase 2: Adversarial Alignment}{3}{section*.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Phase 3: Discriminator Training}{3}{section*.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  Diagram showing DACS. The images X\textsubscript  {S} and X\textsubscript  {T} are mixed together, using Y\textsubscript  {S} for the labels of X\textsubscript  {S}, instead of a pre dicted semantic map to determine the binary mask. The segmenta tion network is then trained on both batches of augmented images and images from the source dataset.}}{3}{figure.3}\protected@file@percent }
+\newlabel{fig:DACS_image}{{3}{3}{Diagram showing DACS. The images X\textsubscript {S} and X\textsubscript {T} are mixed together, using Y\textsubscript {S} for the labels of X\textsubscript {S}, instead of a pre dicted semantic map to determine the binary mask. The segmenta tion network is then trained on both batches of augmented images and images from the source dataset}{figure.3}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}4b DACS}{3}{subsubsection.4.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}Extensions}{3}{subsubsection.4.4.2}\protected@file@percent }
+\citation{yu2018bisenet}
+\citation{chaurasia2017linknet}
+\citation{fan2021rethinking}
+\citation{loveda2021}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}Extensions}{4}{subsubsection.4.4.2}\protected@file@percent }
+\newlabel{fig:dataset_rural_image}{{4.4.2}{4}{Extensions}{subsubsection.4.4.2}{}}
+\newlabel{fig:dataset_urban_image}{{4.4.2}{4}{Extensions}{subsubsection.4.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces right: rural image, left: urban image }}{4}{figure.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Experimental Results}{4}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}LoveDA Dataset}{4}{subsection.5.1}\protected@file@percent }
 \citation{tranheden2021dacs}
 \citation{loveda2021}
 \citation{tsai2018learning}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Experimental Results}{4}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}LoveDA Dataset}{4}{subsection.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Performance on Source Domain}{4}{subsection.5.2}\protected@file@percent }
-\newlabel{tab:urban}{{5.2}{4}{Performance on Source Domain}{subsection.5.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Domain Shift Evaluation}{4}{subsection.5.3}\protected@file@percent }
-\newlabel{tab:shift}{{5.3}{4}{Domain Shift Evaluation}{subsection.5.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Extensions}{4}{subsection.5.4}\protected@file@percent }
-\newlabel{tab:extensions}{{5.4}{4}{Extensions}{subsection.5.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Comparison with Original UDA Paper Results}{4}{subsection.5.5}\protected@file@percent }
 \citation{tranheden2021dacs}
 \citation{tsai2018learning}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Performance on Source Domain}{5}{subsection.5.2}\protected@file@percent }
+\newlabel{tab:urban}{{5.2}{5}{Performance on Source Domain}{subsection.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Domain Shift Evaluation}{5}{subsection.5.3}\protected@file@percent }
+\newlabel{tab:shift}{{5.3}{5}{Domain Shift Evaluation}{subsection.5.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Extensions}{5}{subsection.5.4}\protected@file@percent }
+\newlabel{tab:extensions}{{5.4}{5}{Extensions}{subsection.5.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Comparison with Original UDA Paper Results}{5}{subsection.5.5}\protected@file@percent }
+\newlabel{tab:uda_comparison}{{5.5}{5}{Comparison with Original UDA Paper Results}{subsection.5.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{5}{section.6}\protected@file@percent }
 \bibstyle{ieeetran}
 \bibdata{references}
 \bibcite{tranheden2021dacs}{1}
@@ -64,8 +75,6 @@
 \bibcite{chen2018deeplab}{5}
 \bibcite{yu2018bisenet}{6}
 \bibcite{tsai2018learning}{7}
-\newlabel{tab:uda_comparison}{{5.5}{5}{Comparison with Original UDA Paper Results}{subsection.5.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{5}{section.6}\protected@file@percent }
 \bibcite{chaurasia2017linknet}{8}
 \bibcite{fan2021rethinking}{9}
 \gdef \@abspage@last{6}

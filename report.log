@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.22)  28 JAN 2025 11:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.22)  28 JAN 2025 19:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -275,31 +275,38 @@ Package: ragged2e 2023/06/22 v3.6 ragged2e Package
 \RaggedLeftParindent=\skip64
 \RaggedRightParindent=\skip65
 \JustifyingParindent=\skip66
+) (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count290
+\float@exts=\toks21
+\float@box=\box97
+\@float@everytoks=\toks22
+\@floatcapt=\box98
 ) (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count290
-\l__pdf_internal_box=\box97
+\l__color_backend_stack_int=\count291
+\l__pdf_internal_box=\box99
 ) (report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -335,24 +342,24 @@ LaTeX Font Info:    ... okay on input line 15.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 15.
+Package hyperref Info: Link coloring OFF on input line 16.
 (report.out) (report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
  (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count291
+\scratchcounter=\count292
 \scratchdimen=\dimen177
-\scratchbox=\box98
-\nofMPsegments=\count292
-\nofMParguments=\count293
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count294
+\scratchbox=\box100
+\nofMPsegments=\count293
+\nofMParguments=\count294
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count295
 \MPscratchDim=\dimen178
-\MPnumerator=\count295
-\makeMPintoPDFobject=\count296
-\everyMPtoPDFconversion=\toks22
+\MPnumerator=\count296
+\makeMPintoPDFobject=\count297
+\everyMPtoPDFconversion=\toks24
 ) (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -360,55 +367,86 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 17.
+(Font)              <12> on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 17.
+(Font)              <8> on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 17.
+(Font)              <6> on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 25.
+(Font)              <7> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 25.
+(Font)              <5> on input line 26.
 <image/urban_1.png, id=94, 535.2497pt x 261.22594pt>
 File: image/urban_1.png Graphic file (type png)
 <use image/urban_1.png>
-Package pdftex.def Info: image/urban_1.png  used on input line 37.
-(pdftex.def)             Requested size: 189.47946pt x 92.47476pt.
+Package pdftex.def Info: image/urban_1.png  used on input line 38.
+(pdftex.def)             Requested size: 236.84843pt x 115.59346pt.
 
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--62
+Underfull \hbox (badness 10000) in paragraph at lines 44--59
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--62
+Underfull \hbox (badness 10000) in paragraph at lines 44--59
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--62
+Underfull \hbox (badness 10000) in paragraph at lines 44--59
 
  []
 
 [1
 
-{C:/Users/user/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 83--85
+{C:/Users/user/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.59 
+      <./image/urban_1.png>]
+<image/PIDNET.png, id=122, 559.33969pt x 156.585pt>
+File: image/PIDNET.png Graphic file (type png)
+<use image/PIDNET.png>
+Package pdftex.def Info: image/PIDNET.png  used on input line 62.
+(pdftex.def)             Requested size: 236.84843pt x 66.30522pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--87
 
  []
 
-[2] [3]
+[2
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.91 \item2
+           ) \textbf{Contextual Dependencies}: Urban scene semantics rely on... <./image/PIDNET.png>]
+<image/DACS_structure.png, id=136, 261.97874pt x 94.10156pt>
+File: image/DACS_structure.png Graphic file (type png)
+<use image/DACS_structure.png>
+Package pdftex.def Info: image/DACS_structure.png  used on input line 138.
+(pdftex.def)             Requested size: 236.84843pt x 85.07686pt.
+ [3
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.173 			\item C
+                onsistency regularization on the mixed-domain samples. <./image/DACS_structure.png>]
+<image/rural_1.png, id=156, 368.1253pt x 363.60844pt>
+File: image/rural_1.png Graphic file (type png)
+<use image/rural_1.png>
+Package pdftex.def Info: image/rural_1.png  used on input line 197.
+(pdftex.def)             Requested size: 113.68623pt x 112.29024pt.
+<image/urban_3.png, id=157, 363.60844pt x 366.61969pt>
+File: image/urban_3.png Graphic file (type png)
+<use image/urban_3.png>
+Package pdftex.def Info: image/urban_3.png  used on input line 203.
+(pdftex.def)             Requested size: 113.68623pt x 114.62431pt.
 
-LaTeX Warning: Reference `fig:scale' on page 4 undefined on input line 185.
+
+LaTeX Warning: Reference `fig:scale' on page 4 undefined on input line 220.
 
 
-LaTeX Warning: Reference `fig:class_dist' on page 4 undefined on input line 186.
+LaTeX Warning: Reference `fig:class_dist' on page 4 undefined on input line 221.
 
 
 Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
@@ -422,24 +460,30 @@ Package multicol Warning: Floats and marginpars not allowed inside `multicols' e
 
 Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
 
+[4
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.251 		\begin{center}
+                       <./image/rural_1.png> <./image/urban_3.png>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 257.
+(Font)              <9> on input line 292.
 
-Overfull \hbox (5.0032pt too wide) in paragraph at lines 246--258
- [] 
- []
-
-[4]
-Overfull \hbox (5.0069pt too wide) in paragraph at lines 294--304
+Overfull \hbox (5.0032pt too wide) in paragraph at lines 281--293
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--319
+Overfull \hbox (5.0069pt too wide) in paragraph at lines 329--339
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--354
 []\OT1/cmr/bx/n/9 Domain-Specific Fine-Tuning\OT1/cmr/m/n/9 : In-tro-duc-ing
  []
 
-(report.bbl [5]) [6] (report.aux)
+[5] (report.bbl) [6] (report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -452,17 +496,17 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 0AA71FB28AF141C7BF1C86A573A8538A;3422.
  ) 
 Here is how much of TeX's memory you used:
- 9300 strings out of 474485
- 147766 string characters out of 5744206
- 1953542 words of memory out of 5000000
- 31432 multiletter control sequences out of 15000+600000
+ 9408 strings out of 474485
+ 149760 string characters out of 5744206
+ 1956542 words of memory out of 5000000
+ 31532 multiletter control sequences out of 15000+600000
  564730 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,1124b,721s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (6 pages, 262436 bytes).
+ 75i,8n,79p,1124b,738s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on report.pdf (6 pages, 1566302 bytes).
 PDF statistics:
- 264 PDF objects out of 1000 (max. 8388607)
- 48 named destinations out of 1000 (max. 500000)
- 174 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 283 PDF objects out of 1000 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
+ 194 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -35,14 +35,10 @@
 		
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=0.8\linewidth]{image/urban_1.png}
-			\caption{Una descrizione dell'immagine.}
+			\includegraphics[width=1\linewidth]{image/urban_1.png}
+			\caption{Satellite imagery (left) and its segmented land-use classification map (right) of an urban area}
 			\label{fig:urban_image}
-		  \end{figure}
-
-
-
-
+		\end{figure}
 
 		\section{Related Work}
 		Semantic segmentation has evolved significantly with deep learning. 
@@ -61,7 +57,12 @@
 		Semantic segmentation models often suffer performance degradation when applied across different domains (e.g., urban vs. rural settings). To address this, various domain adaptation techniques have been developed two main method. Adversarial Methods \cite{tsai2018learning}: these approaches train a discriminator to differentiate between source and target domain features. By doing so, the feature extractor is encouraged to generate domain-invariant representations, improving generalization. Image-to-Image Translation: Methods like DACS \cite{tranheden2021dacs} blend domains by leveraging mixed sampling techniques. This strategy generates pseudo-labeled target domain images, enhancing the model's ability to generalize across domains.
 		Additionally, the introduction of the LoveDA dataset \cite{loveda2021} provided a benchmark specifically designed for domain adaptation in remote sensing. With urban and rural splits, LoveDA poses a challenging scenario, advancing research in this field.
 
-		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=1\linewidth]{image/PIDNET.png}
+			\caption{ The analogy between PID controller and proposed network}
+			\label{fig:PIDNET_image}
+		\end{figure}		
 		
 \section{Methods}
 \subsection{Baseline Model Development}
@@ -71,7 +72,7 @@ We implemented DeepLabV2  \cite{chen2018deeplab}  with ResNet-101 backbone, pre-
 \subsubsection{2b Efficient Segmentation Framework}
 To establish real-time capability baselines, we employed PIDNet-S - a streamlined architecture that mimics proportional-integral-derivative control mechanisms through three parallel branches. These branches explicitly manage high-frequency details, mid-level structures, and low-level spatial relationships respectively. The model was similarly initialized with ImageNet weights and trained and evaluated on urban scenes.
 \subsubsection{PIDNet Architecture Details}
-The core PIDNet architecture \cite{pidnet2023} consists of three branches
+The core PIDNet architecture \cite{pidnet2023} consists of three branches (Figure 2)
 \begin{itemize}
 	\item \textbf{Proportional (P) Branch}: Processes full-resolution inputs using shallow layers to preserve spatial precision. Contains edge-aware convolutions for sharp boundary detection.
 	\item \textbf{Integral (I) Branch}: Leverages deep layers with dilated convolutions and spatial pooling to capture multi-scale context. Integrates a Semantic Guidance Module (SGM) to filter low-level noise.
@@ -132,9 +133,20 @@ A fully-convolutional discriminator $D$ learns to distinguish:
 
 This single-stage approach achieves domain invariance by directly matching the structured output distributions rather than intermediate features.  
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{image/DACS_structure.png}
+	\caption{  Diagram showing DACS. The images X\textsubscript{S} and X\textsubscript{T} are
+	mixed together, using Y\textsubscript{S} for the labels of X\textsubscript{S}, instead of a pre
+   dicted semantic map to determine the binary mask. The segmenta
+   tion network is then trained on both batches of augmented images
+	and images from the source dataset.}
+	\label{fig:DACS_image}
+\end{figure}	
+
 	\subsubsection{4b DACS}
 	
-	Domain Adaptation via Cross-domain Mixed Sampling (DACS) \cite{tranheden2021dacs} addresses unsupervised domain adaptation (UDA) by blending data from the source and target domains through class-level mixing. The main aspects of DACS are summarized below:
+	Domain Adaptation (Figure 3) via Cross-domain Mixed Sampling (DACS) \cite{tranheden2021dacs} addresses unsupervised domain adaptation (UDA) by blending data from the source and target domains through class-level mixing. The main aspects of DACS are summarized below:
 	
 	\begin{itemize}
 		\item \textbf{Augmented Training Samples:} 
@@ -176,8 +188,30 @@ This single-stage approach achieves domain invariance by directly matching the s
 		These models emphasize distinct architectural strategies: BiSeNetV1's parallel multi-resolution processing, LinkNet's symmetrical skip connections, and STDCNet's dense feature aggregation.
 		
 		
-		
+
+	
+		\begin{figure}[H]
+			\centering
+			\begin{minipage}{0.48\linewidth}
+				\centering
+				\includegraphics[width=\linewidth]{image/rural_1.png}
+				\label{fig:dataset_rural_image}
+			\end{minipage}
+			\hfill
+			\begin{minipage}{0.48\linewidth}
+				\centering
+				\includegraphics[width=\linewidth]{image/urban_3.png}
+				\label{fig:dataset_urban_image}
+			\end{minipage}
+			
+			\caption{right: rural image, left: urban image }
+
+		\end{figure}
+
+
 		\section{Experimental Results}
+	
+
 		\subsection{LoveDA Dataset}  
 		The LoveDA dataset \cite{loveda2021} is a high-resolution (0.3 m) remote sensing dataset designed for domain-adaptive semantic segmentation in urban and rural environments. It contains 5,987 images across three Chinese cities (Nanjing, Changzhou, Wuhan), annotated with seven classes: *background*, *building*, *road*, *water*, *barren*, *forest*, and *agriculture*. The dataset is explicitly divided into urban (2,522 images) and rural (3,465 images) domains to study domain shift challenges.  
 		
