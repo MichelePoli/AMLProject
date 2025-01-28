@@ -34,35 +34,119 @@
 		
 		Domain adaptation techniques address performance degradation across domains. Adversarial methods \cite{tsai2018learning} train a discriminator to distinguish between source and target domain features, encouraging the feature extractor to produce domain-invariant representations. Image-to-image translation approaches like DACS \cite{tranheden2021dacs} blend domains through mixed sampling, generating pseudo-labeled target domain images to improve model generalization. The LoveDA dataset \cite{loveda2021} provided urban/rural splits to benchmark these methods in remote sensing, offering a challenging scenario for domain adaptation research.
 		
-		\section{Methods}
-		\subsection{Baseline Training}
-		We first trained a classic semantic segmentation network, DeepLabV2 \cite{chen2018deeplab}, on the LoveDA-urban dataset for 20 epochs using a ResNet-101 backbone \cite{he2016deep} pre-trained on ImageNet. DeepLabV2 employs atrous convolutions to capture multi-scale context, which is crucial for accurate segmentation. However, its high computational cost makes it less suitable for real-time applications. Then, we trained PIDNet-S \cite{pidnet2023}, also pre-trained on ImageNet, on LoveDA-urban for 20 epochs to establish an upper bound for real-time performance (mIoU: 48.67\%). PIDNet was chosen for its design that balances high-, mid-, and low-level features, similar to a PID controller, enabling efficient and accurate segmentation. Domain shift was quantified by testing this PIDNet-S model on LoveDA-rural (mIoU: 23.98\%).
-		
-		\subsection{Data Augmentation}
+\section{Methods}
+\subsection{Baseline Model Development}
+\subsubsection{2a Classic Segmentation Architecture } 
+We implemented DeepLabV2  \cite{chen2018deeplab}  with ResNet-101 backbone, pre-trained on ImageNet, using the LoveDA-urban dataset for training. This architecture leverages atrous spatial pyramid pooling to capture multi-scale contextual information through dilated convolutions. While effective for dense prediction tasks, its computational complexity makes it suboptimal for latency-sensitive applications. The model was initialized with ImageNet weights and trained and evaluated on urban scenes.
+
+\subsubsection{2b Efficient Segmentation Framework}
+To establish real-time capability baselines, we employed PIDNet-S - a streamlined architecture that mimics proportional-integral-derivative control mechanisms through three parallel branches. These branches explicitly manage high-frequency details, mid-level structures, and low-level spatial relationships respectively. The model was similarly initialized with ImageNet weights and trained and evaluated on urban scenes.
+\subsubsection{PIDNet Architecture Details}
+The core PIDNet architecture \cite{pidnet2023} consists of three branches
+\begin{itemize}
+	\item \textbf{Proportional (P) Branch}: Processes full-resolution inputs using shallow layers to preserve spatial precision. Contains edge-aware convolutions for sharp boundary detection.
+	\item \textbf{Integral (I) Branch}: Leverages deep layers with dilated convolutions and spatial pooling to capture multi-scale context. Integrates a Semantic Guidance Module (SGM) to filter low-level noise.
+	\item \textbf{Derivative (D) Branch}: Computes high-frequency feature discrepancies between adjacent stages using depthwise separable convolutions. Acts as a boundary corrector by amplifying transitional regions.
+\end{itemize}
+The branches are fused through a \textit{Three-Way Attention Fusion (TWAF)} module that dynamically combines features using spatial and channel attention weights.
+ 
+\subsection{3a Domain Adaptation }
+\label{subsec:domain_shift}
+We investigated cross-domain generalization by evaluating our urban-trained PIDNet-S on the LoveDA-rural dataset without fine-tuning. This experimental design isolates the domain shift problem between man-made urban environments (characterized by geometric regularity and dense infrastructure) and rural landscapes (featuring organic shapes, sparse structures, and varied terrain).
+\\
+\subsubsection{Domain Adaptation challenges}
+The performance degradation observed could be caused by:  
+\begin{itemize}
+\item1) \textbf{Object Scale Variance}: Urban structures maintain relatively consistent scales, while rural elements exhibit greater size variability (trees, water bodies)  
+\item2) \textbf{Contextual Dependencies}: Urban scene semantics rely on positional relationships (e.g., roads between buildings), whereas rural contexts depend more on texture and color patterns  
+\item3) \textbf{Surface Color Distribution}: Artificial materials dominate urban areas (concrete, glass), contrasting with natural materials (soil, vegetation) prevalent in rural regions
+\end{itemize}
+This analysis motivates subsequent domain adaptation strategies to bridge the feature distribution gap between structurally distinct environments.
+
+
+		\subsection{3b Data Augmentation}
 		Data augmentation was used to improve the model's generalization capability by increasing the diversity of the training data. Two augmentation strategies were applied during training with a probability of 0.5:
 		\begin{itemize}
 			\item \textbf{A1}: Geometric transforms (horizontal/vertical flips, 30° rotation)
 			\item \textbf{A2}: Photometric transforms (ColorJitter, GaussianBlur)
 		\end{itemize}
-		The best single augmentation (A2) improved rural mIoU to 30.80\%, while combining A1 and A2 yielded 29.35\%. Photometric augmentations were more effective because they help the model become invariant to changes in lighting and color, which are common differences between the urban and rural domains.
-		\subsection{Domain Adaptation}
-		\subsubsection{Adversarial Training}
-		Adversarial training aims to make the feature representations domain-invariant. A discriminator \cite{tsai2018learning} was trained against PIDNet's features using a binary cross-entropy loss with a $\lambda$ value of 0.0005. The learning rate for the discriminator was set to $5 \times 10^{-4}$. The discriminator's goal is to distinguish between features from the source and target domains, while the segmentation network tries to fool the discriminator. This approach achieved 30.59\% mIoU on the target domain. The limitation of this method is the difficulty in balancing the training of the discriminator and the segmentation network.
+		Photometric augmentations were more effective because they help the model become invariant to changes in lighting and color, which are common differences between the urban and rural domains.
 		
-		\subsubsection{DACS}
-		Domain Adaptation via Cross-domain Mixed Sampling (DACS) \cite{tranheden2021dacs} was implemented to blend classes between the source and target domains. DACS mixes images and labels from both domains at the class level, creating a new training set that encourages the model to learn features that are useful for both domains. This method reached 30.63\% mIoU on the target domain. DACS is particularly effective when the domains have significant differences in class distributions.
-		
-		\subsection{Extensions}
-		\subsubsection{Style Transfer Preprocessing}
-		We applied style transfer using a pre-trained model to preprocess the source domain images, attempting to match the target domain's appearance. This method adapts the visual style of the source images to that of the target images, reducing the domain gap. This resulted in an mIoU of 25.46\% on the target domain. While this method is intuitive, it can be sensitive to the choice of the style transfer model and may not capture all domain-specific characteristics.
-		
-		\subsubsection{Alternative Models}
-		We explored two alternative real-time segmentation models:
+\subsection{Unsupervised Domain Adaptation}  
+ 
+This method aligns domains through adversarial training on segmentation outputs \cite{tsai2018learning}, comprising three phases:  
+
+\paragraph{Phase 1: Source Domain training}  
+The segmentation network $G$ processes source images $I_s$ to produce softmax probability maps:  
+\begin{equation}  
+	P_s = {softmax}(G(I_s)) \in {R}^{C \times W \times H}  
+\end{equation}  
+where $C$ denotes semantic classes. Training uses standard cross-entropy loss with source labels $Y_s$.  
+
+
+
+\paragraph{Phase 2: Adversarial Alignment}  
+The segmentation network now receives gradients to confuse $D$ by:  
+\begin{itemize}  
+	\item Maximizing discriminator uncertainty on $P_t$ (domain label 1)
+	\item Enforcing similar output distributions $P_s \approx P_t$  
+
+\end{itemize}  
+
+\paragraph{Phase 3: Discriminator Training}  
+A fully-convolutional discriminator $D$ learns to distinguish:  
+\begin{itemize}  
+	\item Source softmax outputs $P_s$ (domain label 1)  
+	\item Target softmax outputs $P_t = {softmax}(G(I_t))$ (domain label 0)  
+\end{itemize}  
+
+
+This single-stage approach achieves domain invariance by directly matching the structured output distributions rather than intermediate features.  
+
+	\subsubsection{4b DACS}
+	
+	Domain Adaptation via Cross-domain Mixed Sampling (DACS) \cite{tranheden2021dacs} addresses unsupervised domain adaptation (UDA) by blending data from the source and target domains through class-level mixing. The main aspects of DACS are summarized below:
+	
+	\begin{itemize}
+		\item \textbf{Augmented Training Samples:} 
+		DACS creates hybrid samples by combining:
 		\begin{itemize}
-			\item \textbf{BiSeNetV1} \cite{yu2018bisenet}: Achieved 32.21\% mIoU on the target domain. BiSeNetV1 uses a spatial path and a context path to capture spatial information and context dependencies, respectively.
-			\item \textbf{LinkNet} \cite{chaurasia2017linknet}: Achieved 30.43\% mIoU on the target domain. LinkNet employs an encoder-decoder architecture with skip connections, which helps in preserving spatial information.
+			\item A source domain image, which comes with ground-truth labels.
+			\item A target domain image, which has pseudo-labels generated by the model.
 		\end{itemize}
-		These models were chosen for their efficiency and different architectural designs, providing a comparison to PIDNet.
+		During this process, a subset of classes is selected from the source image using its semantic map, and the corresponding pixels are pasted onto the target image.
+		
+		\item \textbf{Composite Label Generation:}
+		The labels for the mixed image are produced by merging:
+		\begin{itemize}
+			\item Ground-truth labels from the source image.
+			\item Pseudo-labels predicted for the target image.
+		\end{itemize}
+		This ensures that the model is trained on hybrid data containing both reliable source annotations and target pseudo-labels, encouraging feature invariance across domains.
+		
+
+		\item \textbf{Training Loss:} 
+		The overall loss combines:
+		\begin{itemize}
+			\item Supervised learning on the source domain data.
+			\item Consistency regularization on the mixed-domain samples.
+		\end{itemize}
+		Importantly, this does not require any annotations from the target domain.
+		
+
+	\end{itemize}
+	
+		
+		\subsubsection{Extensions}
+		We explored three alternative real-time semantic segmentation architectures:
+		\begin{itemize}
+			\item \textbf{BiSeNetV1} \cite{yu2018bisenet}: Employs a dual-path design with a \textit{spatial path} (high-resolution stream for fine details) and a \textit{context path} (fast downsampling with global average pooling for long-range dependencies). The features are fused using a specialized Feature Fusion Module (FFM).
+			\item \textbf{LinkNet} \cite{chaurasia2017linknet}: Uses a lightweight encoder-decoder structure with residual skip connections. The encoder reduces spatial dimensions through cascaded convolutional blocks, while the decoder employs transposed convolutions for upsampling, with direct additive links between corresponding encoder-decoder layers.
+			\item \textbf{STDC n} \cite{fan2021rethinking}: Features a Short-Term Dense Concatenate backbone that progressively aggregates multi-scale features through dense connections in early stages, followed by a Context Path with Attention Refinement Modules (ARMs) to enhance contextual awareness.
+		\end{itemize}
+		These models emphasize distinct architectural strategies: BiSeNetV1's parallel multi-resolution processing, LinkNet's symmetrical skip connections, and STDCNet's dense feature aggregation.
+		
+		
 		
 		\section{Experimental Results}
 		\subsection{LoveDA Dataset}  
@@ -101,7 +185,7 @@
 		
 			\vspace{2cm}
 			\centering
-			\caption{Performance on LoveDA-Urban (Source Domain)}
+			%\caption{Performance on LoveDA-Urban (Source Domain)}
 			\label{tab:urban}
 			\tiny
 			\begin{tabular}{|l|c|c|c|c|}
@@ -123,7 +207,7 @@
 		
 
 			\centering
-			\caption{Domain Shift: Urban $\rightarrow$ Rural}
+			%\caption{Domain Shift: Urban $\rightarrow$ Rural}
 			\label{tab:shift}
 	 		\resizebox{0.5\textwidth}{!}{%
 			\begin{tabular}{|l|c|c|c|c|c|c|c|}
@@ -145,7 +229,7 @@
 		
 
 			\centering
-			\caption{Extensions on LoveDA-Rural (Target Domain)}
+			%\caption{Extensions on LoveDA-Rural (Target Domain)}
 			\label{tab:extensions}
 			\begin{tabular}{|l|c|}
 				\hline
@@ -169,7 +253,7 @@
 		
 
 			\centering
-			\caption{Comparison with Original UDA Paper Results (LoveDA-Rural)}
+			%\caption{Comparison with Original UDA Paper Results (LoveDA-Rural)}
 			\label{tab:uda_comparison}
 			\resizebox{0.5\textwidth}{!}{%
 			\begin{tabular}{|l|l|c|c|}

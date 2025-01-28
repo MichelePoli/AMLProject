@@ -22,14 +22,19 @@
 \BIBdecl
 
 \bibitem{loveda2021}
-J.~Wang, Z.~Zheng, A.~Ma, G.-S. Xia, and W.~Yang, ``Loveda: A remote sensing
-  land-cover dataset for domain adaptive semantic segmentation,'' \emph{arXiv
-  preprint arXiv:2109.08499}, 2021.
+\BIBentryALTinterwordspacing
+J.~Wang, Z.~Zheng, A.~Ma, X.~Lu, and Y.~Zhong, ``Loveda: {A} remote sensing
+  land-cover dataset for domain adaptive semantic segmentation,'' \emph{CoRR},
+  vol. abs/2110.08733, 2021. [Online]. Available:
+  \url{https://arxiv.org/abs/2110.08733}
+\BIBentrySTDinterwordspacing
 
 \bibitem{pidnet2023}
-J.~Xu, X.~Zhang, Z.~Wu, Y.~Chen, R.~Xu, W.~An, and J.~Zou, ``Pidnet: A
-  real-time semantic segmentation network inspired by pid controllers,''
-  \emph{IEEE Transactions on Image Processing}, vol.~32, pp. 593--606, 2023.
+\BIBentryALTinterwordspacing
+J.~Xu, Z.~Xiong, and S.~P. Bhattacharyya, ``Pidnet: A real-time semantic
+  segmentation network inspired by pid controllers,'' 2023. [Online].
+  Available: \url{https://arxiv.org/abs/2206.02066}
+\BIBentrySTDinterwordspacing
 
 \bibitem{long2015fcn}
 J.~Long, E.~Shelhamer, and T.~Darrell, ``Fully convolutional networks for
@@ -58,14 +63,17 @@ W.~Tranheden, V.~Olsson, J.~Pinto, and L.~Svensson, ``Dacs: Domain adaptation
   via cross-domain mixed sampling,'' \emph{Proceedings of the IEEE/CVF Winter
   Conference on Applications of Computer Vision}, pp. 1479--1489, 2021.
 
-\bibitem{he2016deep}
-K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
-  recognition,'' \emph{Proceedings of the IEEE conference on computer vision
-  and pattern recognition}, pp. 770--778, 2016.
-
 \bibitem{chaurasia2017linknet}
 A.~Chaurasia and E.~Culurciello, ``Linknet: Exploiting encoder representations
   for efficient semantic segmentation,'' \emph{2017 IEEE Visual Communications
   and Image Processing (VCIP)}, pp. 1--4, 2017.
+
+\bibitem{fan2021rethinking}
+\BIBentryALTinterwordspacing
+M.~Fan, S.~Lai, J.~Huang, X.~Wei, Z.~Chai, J.~Luo, and X.~Wei, ``Rethinking
+  bisenet for real-time semantic segmentation,'' \emph{CoRR}, vol.
+  abs/2104.13188, 2021. [Online]. Available:
+  \url{https://arxiv.org/abs/2104.13188}
+\BIBentrySTDinterwordspacing
 
 \end{thebibliography}
