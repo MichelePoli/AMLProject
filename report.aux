@@ -8,71 +8,79 @@
 \citation{pidnet2023}
 \citation{loveda2021}
 \citation{tranheden2021dacs}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Abstract}{1}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Introduction}{1}{section.2}\protected@file@percent }
+\newlabel{fig:dataset_rural_image1}{{2}{1}{Introduction}{section.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Satellite imagery: (Top) Rural images, (Bottom) urban images }}{1}{figure.1}\protected@file@percent }
+\newlabel{fig:dataset_urban_image1}{{1}{1}{Satellite imagery: (Top) Rural images, (Bottom) urban images}{figure.1}{}}
 \citation{long2015fcn}
 \citation{chen2018deeplab}
 \citation{yu2018bisenet}
 \citation{pidnet2023}
 \citation{tsai2018learning}
 \citation{tranheden2021dacs}
-\citation{loveda2021}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Abstract}{1}{section.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2}Introduction}{1}{section.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Satellite imagery (left) and its segmented land-use classification map (right) of an urban area}}{1}{figure.1}\protected@file@percent }
-\newlabel{fig:urban_image}{{1}{1}{Satellite imagery (left) and its segmented land-use classification map (right) of an urban area}{figure.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Related Work}{1}{section.3}\protected@file@percent }
 \citation{chen2018deeplab}
-\citation{pidnet2023}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces  The analogy between PID controller and proposed network}}{2}{figure.2}\protected@file@percent }
-\newlabel{fig:PIDNET_image}{{2}{2}{The analogy between PID controller and proposed network}{figure.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Algorithmic overview. Given images with the size H by W in source and target domains, we pass them through the segmentation network to obtain output predictions. For source predictions with C categories, a segmentation loss is computed based on the source ground truth. To make target predictions closer to the source ones, we utilize a discriminator to distinguish whether the input is from the source or target domain. Then an adversarial loss is calculated on the target prediction and is back-propagated to the segmentation network. We call this process as one adaptation module, and we illustrate our proposed multi-level adversarial learning by adopting two adaptation modules at two different levels here.}}{2}{figure.2}\protected@file@percent }
+\newlabel{fig:adversarial_model}{{2}{2}{Algorithmic overview. Given images with the size H by W in source and target domains, we pass them through the segmentation network to obtain output predictions. For source predictions with C categories, a segmentation loss is computed based on the source ground truth. To make target predictions closer to the source ones, we utilize a discriminator to distinguish whether the input is from the source or target domain. Then an adversarial loss is calculated on the target prediction and is back-propagated to the segmentation network. We call this process as one adaptation module, and we illustrate our proposed multi-level adversarial learning by adopting two adaptation modules at two different levels here}{figure.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Related Work}{2}{section.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {4}Methods}{2}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Baseline Model Development}{2}{subsection.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}2a Classic Segmentation Architecture }{2}{subsubsection.4.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}2b Efficient Segmentation Framework}{2}{subsubsection.4.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3}PIDNet Architecture Details}{2}{subsubsection.4.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}3a Domain Adaptation }{2}{subsection.4.2}\protected@file@percent }
-\newlabel{subsec:domain_shift}{{4.2}{2}{3a Domain Adaptation}{subsection.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Baseline model development}{2}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}2a Classic segmentation architecture }{2}{subsubsection.4.1.1}\protected@file@percent }
+\citation{pidnet2023}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces An overview of the basic architecture of our proposed Proportional-Integral-Derivative Network (PIDNet)}}{3}{figure.3}\protected@file@percent }
+\newlabel{fig:PIDNET_image}{{3}{3}{An overview of the basic architecture of our proposed Proportional-Integral-Derivative Network (PIDNet)}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}2b Efficient segmentation framework}{3}{subsubsection.4.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3}PIDNet architecture details}{3}{subsubsection.4.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}3a Domain adaptation }{3}{subsection.4.2}\protected@file@percent }
+\newlabel{subsec:domain_shift}{{4.2}{3}{3a Domain adaptation}{subsection.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Example of urban image (left) and rural image (right)}}{3}{figure.4}\protected@file@percent }
+\newlabel{fig:dataset_mix}{{4}{3}{Example of urban image (left) and rural image (right)}{figure.4}{}}
 \citation{tsai2018learning}
 \citation{tranheden2021dacs}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Domain Adaptation challenges}{3}{subsubsection.4.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}3b Data Augmentation}{3}{subsection.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Unsupervised Domain Adaptation}{3}{subsection.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Phase 1: Source Domain training}{3}{section*.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Phase 2: Adversarial Alignment}{3}{section*.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Phase 3: Discriminator Training}{3}{section*.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  Diagram showing DACS. The images X\textsubscript  {S} and X\textsubscript  {T} are mixed together, using Y\textsubscript  {S} for the labels of X\textsubscript  {S}, instead of a pre dicted semantic map to determine the binary mask. The segmenta tion network is then trained on both batches of augmented images and images from the source dataset.}}{3}{figure.3}\protected@file@percent }
-\newlabel{fig:DACS_image}{{3}{3}{Diagram showing DACS. The images X\textsubscript {S} and X\textsubscript {T} are mixed together, using Y\textsubscript {S} for the labels of X\textsubscript {S}, instead of a pre dicted semantic map to determine the binary mask. The segmenta tion network is then trained on both batches of augmented images and images from the source dataset}{figure.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}4b DACS}{3}{subsubsection.4.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Domain adaptation challenges}{4}{subsubsection.4.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The left image is modified by augmentation A1, while the right image is modified by augmentation A2.}}{4}{figure.5}\protected@file@percent }
+\newlabel{fig:data_aug}{{5}{4}{The left image is modified by augmentation A1, while the right image is modified by augmentation A2}{figure.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}3b Data augmentation}{4}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Unsupervised domain adaptation}{4}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Phase 1: Source domain training}{4}{section*.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Phase 2: Adversarial alignment}{4}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Phase 3: Discriminator training}{4}{section*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}4b DACS}{4}{subsubsection.4.4.1}\protected@file@percent }
 \citation{yu2018bisenet}
 \citation{chaurasia2017linknet}
 \citation{fan2021rethinking}
 \citation{loveda2021}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}Extensions}{4}{subsubsection.4.4.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces rural image}}{4}{figure.4}\protected@file@percent }
-\newlabel{fig:dataset_rural_image1}{{4}{4}{rural image}{figure.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces urban image }}{4}{figure.5}\protected@file@percent }
-\newlabel{fig:dataset_urban_image1}{{5}{4}{urban image}{figure.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Class distribution similarities between urban (top) and rural (bottom) domains in LoveDA: The background class dominates both domains.}}{4}{figure.6}\protected@file@percent }
-\newlabel{fig:class_eug}{{6}{4}{Class distribution similarities between urban (top) and rural (bottom) domains in LoveDA: The background class dominates both domains}{figure.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Experimental Results}{4}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}LoveDA Dataset}{4}{subsection.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Performance on Source Domain}{5}{subsection.5.2}\protected@file@percent }
-\newlabel{tab:urban}{{5.2}{5}{Performance on Source Domain}{subsection.5.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Domain Shift Evaluation}{5}{subsection.5.3}\protected@file@percent }
-\newlabel{tab:shift}{{5.3}{5}{Domain Shift Evaluation}{subsection.5.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Extensions}{5}{subsection.5.4}\protected@file@percent }
-\newlabel{tab:extensions}{{5.4}{5}{Extensions}{subsection.5.4}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.1}Hyperparameter Tuning Results and Analysis}{5}{subsubsection.5.4.1}\protected@file@percent }
-\newlabel{tab:hyperparameters}{{5.4.1}{5}{Hyperparameter Tuning Results and Analysis}{subsubsection.5.4.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces  Diagram showing DACS. The images X\textsubscript  {S} and X\textsubscript  {T} are mixed together, using Y\textsubscript  {S} for the labels of X\textsubscript  {S}, instead of a pre dicted semantic map to determine the binary mask. The segmenta tion network is then trained on both batches of augmented images and images from the source dataset.}}{5}{figure.6}\protected@file@percent }
+\newlabel{fig:DACS_image}{{6}{5}{Diagram showing DACS. The images X\textsubscript {S} and X\textsubscript {T} are mixed together, using Y\textsubscript {S} for the labels of X\textsubscript {S}, instead of a pre dicted semantic map to determine the binary mask. The segmenta tion network is then trained on both batches of augmented images and images from the source dataset}{figure.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}Extensions}{5}{subsubsection.4.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Class distribution similarities between urban (top) and rural (bottom) domains in LoveDA: the background class dominates both domains.}}{5}{figure.7}\protected@file@percent }
+\newlabel{fig:class_eug}{{7}{5}{Class distribution similarities between urban (top) and rural (bottom) domains in LoveDA: the background class dominates both domains}{figure.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Experimental results}{5}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}LoveDA dataset}{5}{subsection.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Class distribution diversity between urban (top) and rural (bottom) domains in LoveDA.}}{6}{figure.8}\protected@file@percent }
+\newlabel{fig:class_div}{{8}{6}{Class distribution diversity between urban (top) and rural (bottom) domains in LoveDA}{figure.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Performance on source domain}{6}{subsection.5.2}\protected@file@percent }
+\newlabel{tab:urban}{{5.2}{6}{Performance on source domain}{subsection.5.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Performance comparison of different hyperparameter tuning.}}{6}{table.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Domain shift evaluation}{6}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Extensions}{6}{subsection.5.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Performance comparison of different models on rural images.}}{6}{table.2}\protected@file@percent }
+\newlabel{tab:extensions}{{2}{6}{Performance comparison of different models on rural images}{table.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.1}Hyperparameter tuning Rresults and analysis}{6}{subsubsection.5.4.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Performance comparison of different models on urban images.}}{6}{table.3}\protected@file@percent }
+\newlabel{tab:hyperparameters}{{3}{6}{Performance comparison of different models on urban images}{table.3}{}}
 \citation{tranheden2021dacs}
 \citation{loveda2021}
 \citation{tsai2018learning}
 \citation{tranheden2021dacs}
 \citation{tsai2018learning}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.2}Loss Function Comparison}{6}{subsubsection.5.4.2}\protected@file@percent }
-\newlabel{tab:loss_functions}{{5.4.2}{6}{Loss Function Comparison}{subsubsection.5.4.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Comparison with Original UDA Paper Results}{6}{subsection.5.5}\protected@file@percent }
-\newlabel{tab:uda_comparison}{{5.5}{6}{Comparison with Original UDA Paper Results}{subsection.5.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{6}{section.6}\protected@file@percent }
+\newlabel{tab:shift}{{}{7}{}{table.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Performance comparison of different version of aumented dataset.}}{7}{table.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.2}Loss Function Comparison}{7}{subsubsection.5.4.2}\protected@file@percent }
+\newlabel{tab:loss_functions}{{5.4.2}{7}{Loss Function Comparison}{subsubsection.5.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Comparison with Original UDA Paper Results}{7}{subsection.5.5}\protected@file@percent }
+\newlabel{tab:uda_comparison}{{5.5}{7}{Comparison with Original UDA Paper Results}{subsection.5.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{7}{section.6}\protected@file@percent }
 \bibstyle{ieeetran}
 \bibdata{references}
 \bibcite{tranheden2021dacs}{1}
@@ -84,4 +92,4 @@
 \bibcite{tsai2018learning}{7}
 \bibcite{chaurasia2017linknet}{8}
 \bibcite{fan2021rethinking}{9}
-\gdef \@abspage@last{7}
+\gdef \@abspage@last{8}
