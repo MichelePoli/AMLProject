@@ -32,12 +32,12 @@
 		
 		Domain adaptation aims to bridge this performance gap by aligning the source and target domains without requiring extensive labeled data from the target domain. While several methods exist, real-time semantic segmentation introduces additional constraints, such as maintaining high inference speed and low computational cost. PIDNet \cite{pidnet2023}, a real-time segmentation network inspired by Proportional-Integral-Derivative (PID) controllers, serves as the backbone for our study due to its efficiency and accuracy in real-time tasks.
 		
-		This report focuses on evaluating and improving the performance of PIDNet for domain-adaptive semantic segmentation using the LoveDA dataset \cite{loveda2021}. We first quantify the performance degradation caused by domain shift. Next, we implement data augmentation techniques and two domain adaptation approaches—adversarial training and image-to-image translation (DACS)\cite{tranheden2021dacs} —to mitigate this issue. Our findings highlight the potential of these methods to enhance generalization while preserving the real-time capabilities of the model.
+		This report focuses on evaluating and improving the performance of PIDNet for domain-adaptive semantic segmentation using the LoveDA dataset \cite{loveda2021} (Figure \ref{fig:urban_image}). We first quantify the performance degradation caused by domain shift. Next, we implement data augmentation techniques and two domain adaptation approaches—adversarial training and image-to-image translation (DACS)\cite{tranheden2021dacs} —to mitigate this issue. Our findings highlight the potential of these methods to enhance generalization while preserving the real-time capabilities of the model.
 		
 		
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=1\linewidth]{image/urban_1.png}
+			\includegraphics[width=1\linewidth]{image/urban+mask1.png}
 			\caption{Satellite imagery (left) and its segmented land-use classification map (right) of an urban area}
 			\label{fig:urban_image}
 		\end{figure}
@@ -57,11 +57,11 @@
 		\\
 		\textbf{Domain Adaptation Techniques}
 		Semantic segmentation models often suffer performance degradation when applied across different domains (e.g., urban vs. rural settings). To address this, various domain adaptation techniques have been developed two main method. Adversarial Methods \cite{tsai2018learning}: these approaches train a discriminator to differentiate between source and target domain features. By doing so, the feature extractor is encouraged to generate domain-invariant representations, improving generalization. Image-to-Image Translation: Methods like DACS \cite{tranheden2021dacs} blend domains by leveraging mixed sampling techniques. This strategy generates pseudo-labeled target domain images, enhancing the model's ability to generalize across domains.
-		Additionally, the introduction of the LoveDA dataset \cite{loveda2021} provided a benchmark specifically designed for domain adaptation in remote sensing. With urban and rural splits, LoveDA poses a challenging scenario, advancing research in this field.
+		Additionally, the introduction of the LoveDA dataset \cite{loveda2021}  provided a benchmark specifically designed for domain adaptation in remote sensing. With urban and rural splits, LoveDA poses a challenging scenario, advancing research in this field.
 
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=1\linewidth]{image/PIDNET.png}
+			\includegraphics[width=1\linewidth]{image/general/PIDNET.png}
 			\caption{ The analogy between PID controller and proposed network}
 			\label{fig:PIDNET_image}
 		\end{figure}		
@@ -74,7 +74,7 @@ We implemented DeepLabV2  \cite{chen2018deeplab}  with ResNet-101 backbone, pre-
 \subsubsection{2b Efficient Segmentation Framework}
 To establish real-time capability baselines, we employed PIDNet-S - a streamlined architecture that mimics proportional-integral-derivative control mechanisms through three parallel branches. These branches explicitly manage high-frequency details, mid-level structures, and low-level spatial relationships respectively. The model was similarly initialized with ImageNet weights and trained and evaluated on urban scenes.
 \subsubsection{PIDNet Architecture Details}
-The core PIDNet architecture \cite{pidnet2023} consists of three branches (Figure 2)
+The core PIDNet architecture \cite{pidnet2023} consists of three branches (Figure \ref{fig:PIDNET_image})
 \begin{itemize}
 	\item \textbf{Proportional (P) Branch}: Processes full-resolution inputs using shallow layers to preserve spatial precision. Contains edge-aware convolutions for sharp boundary detection.
 	\item \textbf{Integral (I) Branch}: Leverages deep layers with dilated convolutions and spatial pooling to capture multi-scale context. Integrates a Semantic Guidance Module (SGM) to filter low-level noise.
@@ -91,7 +91,7 @@ The performance degradation observed could be caused by:
 \begin{itemize}
 \item1) \textbf{Object Scale Variance}: Urban structures maintain relatively consistent scales, while rural elements exhibit greater size variability (trees, water bodies)  
 \item2) \textbf{Contextual Dependencies}: Urban scene semantics rely on positional relationships (e.g., roads between buildings), whereas rural contexts depend more on texture and color patterns  
-\item3) \textbf{Surface Color Distribution}: Artificial materials dominate urban areas (concrete, glass), contrasting with natural materials (soil, vegetation) prevalent in rural regions
+\item3) \textbf{Surface Color Distribution}: Artificial materials dominate urban areas (concrete, glass) (Figure \ref{fig:dataset_urban_image1}), contrasting with natural materials (soil, vegetation) prevalent in rural regions (Figure \ref{fig:dataset_rural_image2})
 \end{itemize}
 This analysis motivates subsequent domain adaptation strategies to bridge the feature distribution gap between structurally distinct environments.
 
@@ -137,7 +137,7 @@ This single-stage approach achieves domain invariance by directly matching the s
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\linewidth]{image/DACS_structure.png}
+	\includegraphics[width=1\linewidth]{image/general/DACS_structure.png}
 	\caption{  Diagram showing DACS. The images X\textsubscript{S} and X\textsubscript{T} are
 	mixed together, using Y\textsubscript{S} for the labels of X\textsubscript{S}, instead of a pre
    dicted semantic map to determine the binary mask. The segmenta
@@ -148,7 +148,7 @@ This single-stage approach achieves domain invariance by directly matching the s
 
 	\subsubsection{4b DACS}
 	
-	Domain Adaptation (Figure 3) via Cross-domain Mixed Sampling (DACS) \cite{tranheden2021dacs} addresses unsupervised domain adaptation (UDA) by blending data from the source and target domains through class-level mixing. The main aspects of DACS are summarized below:
+	Domain Adaptation (Figure \ref{fig:DACS_image}) via Cross-domain Mixed Sampling (DACS) \cite{tranheden2021dacs} addresses unsupervised domain adaptation (UDA) by blending data from the source and target domains through class-level mixing. The main aspects of DACS are summarized below:
 	
 	\begin{itemize}
 		\item \textbf{Augmented Training Samples:} 
@@ -196,42 +196,86 @@ This single-stage approach achieves domain invariance by directly matching the s
 			\centering
 			\begin{minipage}{0.48\linewidth}
 				\centering
-				\includegraphics[width=\linewidth]{image/rural_1.png}
-				\label{fig:dataset_rural_image}
+				\includegraphics[width=1\linewidth]{image/rural_1.png}
+				
+				% \label{fig:dataset_rural_image1}
+				% \caption{rural image}
+				
 			\end{minipage}
-			\hfill
 			\begin{minipage}{0.48\linewidth}
 				\centering
-				\includegraphics[width=\linewidth]{image/urban_3.png}
-				\label{fig:dataset_urban_image}
+				\includegraphics[width=1\linewidth]{image/rural_2.png}
+				
+				
+				% \caption{rural image}
+				
 			\end{minipage}
-			
-			\caption{right: rural image, left: urban image }
+			\caption{rural image}
+			\label{fig:dataset_rural_image1}
+
+			\hfill
+			\\
+			\begin{minipage}{0.48\linewidth}
+				\centering
+				\includegraphics[width=1\linewidth]{image/urban_2.png}
+				
+				
+				% \label{fig:dataset_urban_image1}
+				% \caption{urban image }
+				
+			\end{minipage}
+			\begin{minipage}{0.48\linewidth}
+				\centering
+				\includegraphics[width=1\linewidth]{image/urban_1.png}
+				
+				
+				% \label{fig:dataset_urban_image2}
+				
+				
+			\end{minipage}
+
+			\caption{urban image }
+			\label{fig:dataset_urban_image1}
+
+		\end{figure}
+
+		\begin{figure}[H]  
+
+			\centering
+			\begin{minipage}{1\linewidth}
+				\centering
+				\includegraphics[width=1\linewidth]{image/urban+mask4.png}
+				
+				% \label{fig:dataset_rural_image1}
+				
+			\end{minipage}
+			\begin{minipage}{1\linewidth}
+				\centering
+				\includegraphics[width=1\linewidth]{image/rural+mask4.png}
+				
+				% \label{fig:dataset_rural_image2}
+				
+			\end{minipage}
+			\caption{Class distribution similarities between urban (top) and rural (bottom) domains in LoveDA: The background class dominates both domains.}  
+			\label{fig:class_eug}  
 
 		\end{figure}
 
 
+
 		\section{Experimental Results}
-	
 
 		\subsection{LoveDA Dataset}  
 		The LoveDA dataset \cite{loveda2021} is a high-resolution (0.3 m) remote sensing dataset designed for domain-adaptive semantic segmentation in urban and rural environments. It contains 5,987 images across three Chinese cities (Nanjing, Changzhou, Wuhan), annotated with seven classes: *background*, *building*, *road*, *water*, *barren*, *forest*, and *agriculture*. The dataset is explicitly divided into urban (2,522 images) and rural (3,465 images) domains to study domain shift challenges.  
 		
 		Key characteristics of LoveDA include:  
 		\begin{itemize}  
-			\item \textbf{Multi-scale Objects}: Urban scenes feature densely packed buildings and structured roads, while rural areas contain scattered agricultural plots and irregular water bodies. Buildings in urban regions exhibit larger size variance compared to rural regions (Figure \ref{fig:scale}).  
-			\item \textbf{Complex Backgrounds}: The *background* class dominates both domains (Figure \ref{fig:class_dist}), encompassing diverse elements like vehicles and undeveloped land, which introduces high intra-class variance.  
+			\item \textbf{Multi-scale Objects}: Urban scenes feature densely packed buildings and structured roads, while rural areas contain scattered agricultural plots and irregular water bodies. Buildings in urban regions exhibit larger size variance compared to rural regions (Figure \ref{fig:dataset_rural_image1}).  
+			\item \textbf{Complex Backgrounds}: The *background* class dominates both domains (Figure \ref{fig:class_eug}), encompassing diverse elements like vehicles and undeveloped land, which introduces high intra-class variance.  
 			\item \textbf{Domain Shift}: Urban and rural domains exhibit divergent class distributions (e.g., urban has 32\% buildings vs. rural’s 8\%) and spectral properties (lower variance in rural areas due to homogeneous landscapes).  
 		\end{itemize}  
 		
-		\begin{figure}[ht]  
-			\begin{center}
-
-			\caption{Class distribution differences between urban and rural domains in LoveDA. Buildings dominate urban areas, while agriculture is prevalent in rural regions.}  
-			\label{fig:class_dist} 
-			\end{center} 
-
-		\end{figure}  
+		  
 		
 		For domain adaptation experiments, LoveDA provides two tasks:  
 		\begin{enumerate}  

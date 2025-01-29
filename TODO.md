@@ -12,3 +12,5 @@ aggiungere qualcosa sulla domain adaptation -> paper loveda
 
 tabelle più grosse
 
+
+(Figure \ref{fig:urban_image})

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.22)  28 JAN 2025 19:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.22)  29 JAN 2025 12:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -289,24 +289,24 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 ) (report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -342,7 +342,7 @@ LaTeX Font Info:    ... okay on input line 16.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 16.
+Package hyperref Info: Link coloring OFF on input line 18.
 (report.out) (report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
@@ -367,32 +367,32 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 18.
+(Font)              <12> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 18.
+(Font)              <8> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 18.
+(Font)              <6> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 26.
+(Font)              <7> on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 26.
-<image/urban_1.png, id=94, 535.2497pt x 261.22594pt>
-File: image/urban_1.png Graphic file (type png)
-<use image/urban_1.png>
-Package pdftex.def Info: image/urban_1.png  used on input line 38.
-(pdftex.def)             Requested size: 236.84843pt x 115.59346pt.
+(Font)              <5> on input line 28.
+<image/urban+mask1.png, id=103, 574.39594pt x 277.035pt>
+File: image/urban+mask1.png Graphic file (type png)
+<use image/urban+mask1.png>
+Package pdftex.def Info: image/urban+mask1.png  used on input line 40.
+(pdftex.def)             Requested size: 236.84843pt x 114.23184pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--59
+Underfull \hbox (badness 10000) in paragraph at lines 46--61
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--59
+Underfull \hbox (badness 10000) in paragraph at lines 46--61
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--59
+Underfull \hbox (badness 10000) in paragraph at lines 46--61
 
  []
 
@@ -402,15 +402,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--59
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.59 
-      <./image/urban_1.png>]
-<image/PIDNET.png, id=122, 559.33969pt x 156.585pt>
-File: image/PIDNET.png Graphic file (type png)
-<use image/PIDNET.png>
-Package pdftex.def Info: image/PIDNET.png  used on input line 62.
+l.61 
+      <./image/urban+mask1.png>]
+<image/general/PIDNET.png, id=131, 559.33969pt x 156.585pt>
+File: image/general/PIDNET.png Graphic file (type png)
+<use image/general/PIDNET.png>
+Package pdftex.def Info: image/general/PIDNET.png  used on input line 64.
 (pdftex.def)             Requested size: 236.84843pt x 66.30522pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--87
+Underfull \hbox (badness 10000) in paragraph at lines 87--89
 
  []
 
@@ -418,72 +418,108 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--87
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.91 \item2
-           ) \textbf{Contextual Dependencies}: Urban scene semantics rely on... <./image/PIDNET.png>]
-<image/DACS_structure.png, id=136, 261.97874pt x 94.10156pt>
-File: image/DACS_structure.png Graphic file (type png)
-<use image/DACS_structure.png>
-Package pdftex.def Info: image/DACS_structure.png  used on input line 138.
+l.93 \item2
+           ) \textbf{Contextual Dependencies}: Urban scene semantics rely on... <./image/general/PIDNET.png>]
+
+LaTeX Warning: Reference `fig:dataset_rural_image2' on page 3 undefined on input line 94.
+
+<image/general/DACS_structure.png, id=147, 261.97874pt x 94.10156pt>
+File: image/general/DACS_structure.png Graphic file (type png)
+<use image/general/DACS_structure.png>
+Package pdftex.def Info: image/general/DACS_structure.png  used on input line 140.
 (pdftex.def)             Requested size: 236.84843pt x 85.07686pt.
- [3
+[3
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.173 			\item C
-                onsistency regularization on the mixed-domain samples. <./image/DACS_structure.png>]
-<image/rural_1.png, id=156, 368.1253pt x 363.60844pt>
+l.174 			\item S
+                upervised learning on the source domain data. <./image/general/DACS_structure.png>]
+<image/rural_1.png, id=169, 359.09157pt x 357.58594pt>
 File: image/rural_1.png Graphic file (type png)
 <use image/rural_1.png>
-Package pdftex.def Info: image/rural_1.png  used on input line 197.
-(pdftex.def)             Requested size: 113.68623pt x 112.29024pt.
-<image/urban_3.png, id=157, 363.60844pt x 366.61969pt>
-File: image/urban_3.png Graphic file (type png)
-<use image/urban_3.png>
-Package pdftex.def Info: image/urban_3.png  used on input line 203.
-(pdftex.def)             Requested size: 113.68623pt x 114.62431pt.
-
-
-LaTeX Warning: Reference `fig:scale' on page 4 undefined on input line 220.
-
-
-LaTeX Warning: Reference `fig:class_dist' on page 4 undefined on input line 221.
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
-
-[4
+Package pdftex.def Info: image/rural_1.png  used on input line 199.
+(pdftex.def)             Requested size: 113.68623pt x 113.20761pt.
+<image/rural_2.png, id=170, 244.66406pt x 241.65282pt>
+File: image/rural_2.png Graphic file (type png)
+<use image/rural_2.png>
+Package pdftex.def Info: image/rural_2.png  used on input line 207.
+(pdftex.def)             Requested size: 113.68623pt x 112.28996pt.
+<image/urban_2.png, id=171, 363.60844pt x 358.33875pt>
+File: image/urban_2.png Graphic file (type png)
+<use image/urban_2.png>
+Package pdftex.def Info: image/urban_2.png  used on input line 220.
+(pdftex.def)             Requested size: 113.68623pt x 112.03526pt.
+<image/urban_1.png, id=172, 245.41687pt x 243.15843pt>
+File: image/urban_1.png Graphic file (type png)
+<use image/urban_1.png>
+Package pdftex.def Info: image/urban_1.png  used on input line 229.
+(pdftex.def)             Requested size: 113.68623pt x 112.64081pt.
+<image/urban+mask4.png, id=173, 572.89032pt x 280.79906pt>
+File: image/urban+mask4.png Graphic file (type png)
+<use image/urban+mask4.png>
+Package pdftex.def Info: image/urban+mask4.png  used on input line 247.
+(pdftex.def)             Requested size: 236.84843pt x 116.09239pt.
+<image/rural+mask4.png, id=174, 570.63188pt x 277.78781pt>
+File: image/rural+mask4.png Graphic file (type png)
+<use image/rural+mask4.png>
+Package pdftex.def Info: image/rural+mask4.png  used on input line 254.
+(pdftex.def)             Requested size: 236.84843pt x 115.29674pt.
+ [4
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.251 		\begin{center}
-                       <./image/rural_1.png> <./image/urban_3.png>]
+l.274 			\item \textbf
+                      {Complex Backgrounds}: The *background* class dominate...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.274 			\item \textbf
+                      {Complex Backgrounds}: The *background* class dominate...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.274 			\item \textbf
+                      {Complex Backgrounds}: The *background* class dominate... <./image/rural_1.png> <./image/rural_2.png> <./image/urban_2.png> <./image/urban_1.png> <./image/urban+mask4.png> <./image/rural+mask4.png>]
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' environment!.
+
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 292.
+(Font)              <9> on input line 338.
 
-Overfull \hbox (5.0032pt too wide) in paragraph at lines 281--293
+Overfull \hbox (5.0032pt too wide) in paragraph at lines 327--339
  [] 
  []
 
 
-Overfull \hbox (5.0069pt too wide) in paragraph at lines 329--339
+Overfull \hbox (5.00008pt too wide) in paragraph at lines 365--376
+ [] 
+ []
+
+[5]
+Overfull \hbox (5.00261pt too wide) in paragraph at lines 392--402
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--354
+Overfull \hbox (5.0069pt too wide) in paragraph at lines 425--435
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 449--450
 []\OT1/cmr/bx/n/9 Domain-Specific Fine-Tuning\OT1/cmr/m/n/9 : In-tro-duc-ing
  []
 
-[5] (report.bbl) [6] (report.aux)
+
+Overfull \vbox (1.56908pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (7.87212pt too high) has occurred while \output is active []
+
+ [6] (report.bbl) [7] (report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -493,20 +529,20 @@ L3 programming layer <2024-01-04>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 0AA71FB28AF141C7BF1C86A573A8538A;3422.
+(rerunfilecheck)             Checksum: 2999BF8AA4A685D26527C54895DB03C7;3906.
  ) 
 Here is how much of TeX's memory you used:
- 9408 strings out of 474485
- 149760 string characters out of 5744206
- 1956542 words of memory out of 5000000
- 31532 multiletter control sequences out of 15000+600000
+ 9445 strings out of 474485
+ 150783 string characters out of 5744206
+ 1971542 words of memory out of 5000000
+ 31564 multiletter control sequences out of 15000+600000
  564730 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,1124b,738s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (6 pages, 1566302 bytes).
+ 75i,9n,79p,1124b,742s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on report.pdf (7 pages, 2768759 bytes).
 PDF statistics:
- 283 PDF objects out of 1000 (max. 8388607)
- 52 named destinations out of 1000 (max. 500000)
- 194 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 326 PDF objects out of 1000 (max. 8388607)
+ 57 named destinations out of 1000 (max. 500000)
+ 230 words of extra memory for PDF output out of 10000 (max. 10000000)
 
