@@ -8,6 +8,8 @@
 \usepackage{ragged2e}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{hyperref}
+
 
 
 \title{Real-time Domain Adaptation in Semantic Segmentation}
@@ -309,6 +311,56 @@ This single-stage approach achieves domain invariance by directly matching the s
 				LinkNet & 30.43 \\ \hline
 			\end{tabular}
 		\end{center} 
+
+        \subsubsection{Hyperparameter Tuning Results and Analysis}
+        \justifying
+        Table \ref{tab:hyperparameters} presents the results of hyperparameter tuning experiments conducted on the LoveDA-rural dataset. The default configuration (batch size = 16, learning rate = \(10^{-4}\)) achieved the highest validation mIoU of 30.63\%. Smaller batch sizes (2, 8) resulted in worse performance, likely due to instability in training and poor gradient estimation. Increasing the learning rate to \(10^{-3}\) degraded performance, probably because of convergence issues. The adaptive lambda adjustment also did not improve results, showing limited generalization benefits.
+        
+        \begin{center}
+        \label{tab:hyperparameters}
+        \resizebox{0.5\textwidth}{!}{%
+        \begin{tabular}{|l|c|}
+            \hline
+            Configuration & Best Validation mIoU (\%) \\ \hline
+            Batch Size = 16, LR = \(10^{-4}\) (Default)  & 30.63 \\ \hline
+            Batch Size = 2, LR = \(10^{-4}\)  & 15.00 \\ \hline
+            Batch Size = 8, LR = \(10^{-4}\)  & 16.59 \\ \hline
+            Batch Size = 16, LR = \(10^{-3}\)  & 19.09 \\ \hline
+            Batch Size = 16, Adaptive Lambda  & 18.26 \\ \hline
+        \end{tabular}
+        }
+        \end{center}
+        Smaller batch sizes (2, 8) resulted in significantly lower performance, likely due to higher gradient noise and instability in training, leading to suboptimal convergence. A higher learning rate (\(10^{-3}\)) caused a decrease in mIoU, probably due to overshooting during optimization, preventing the model from reaching a good local minimum. The introduction of an adaptive lambda strategy, while theoretically beneficial for balancing losses dynamically, did not improve the results, possibly due to inadequate adaptation to the dataset characteristics or suboptimal parameter tuning.
+
+        \subsubsection{Loss Function Comparison}
+        \justifying
+        Table \ref{tab:loss_functions} presents the results of different loss functions evaluated on the LoveDA-rural dataset. The default configuration utilized OhemCrossEntropy with the DACS loss formulation, achieving the highest validation mIoU of 30.63\%. 
+        
+        Boundary loss resulted in the worst performance, with a validation mIoU of 8.50\% and a considerably higher loss value of 11.1707. This high loss value points to issues with gradient propagation, potentially caused by boundary loss not being as effective at focusing on difficult regions. The model likely failed to effectively learn from the more complex areas of the image, resulting in low accuracy and unstable training.
+
+        CrossEntropy loss improved upon boundary loss, with a validation mIoU of 24.59\% and a loss value of 0.8962. While the loss value is lower than that of boundary loss, the performance still lags behind the default OhemCrossEntropy + DACS setup. The absence of Online Hard Example Mining (Ohem), which helps prevent bias towards background pixels, could explain this drop in mIoU. The model might have focused on easier examples and ignored the more difficult ones, leading to a suboptimal performance.
+        
+        Dice loss performed slightly better than CrossEntropy loss, achieving a validation mIoU of 22.66\% with a corresponding loss value of 0.6475. Dice loss is typically used to address class imbalance, but in this case, it did not outperform the default setup. The lack of an explicit mechanism to focus on difficult or hard-to-learn pixels, which Ohem provides, might explain why Dice loss was not as effective in this context. While the lower loss value is a positive indicator, it does not directly translate to improved mIoU.
+
+        
+        \begin{center}
+            \label{tab:loss_functions}
+            \resizebox{0.5\textwidth}{!}{%
+            \begin{tabular}{|l|c|c|}
+                \hline
+                Loss Function & Validation mIoU (\%) & Loss Value \\ \hline
+                OhemCrossEntropy + DACS (Default) & 30.63 & 0.7993 \\ \hline
+                Boundary Loss & 8.50 & 11.1707 \\ \hline
+                CrossEntropy Loss & 24.59 & 0.8962 \\ \hline
+                Dice Loss & 22.66 & 0.6475 \\ \hline
+            \end{tabular}
+            }
+        \end{center}
+
+
+        
+
+
 
 		\subsection{Comparison with Original UDA Paper Results}
 		Table \ref{tab:uda_comparison} compares our domain adaptation results with those reported in the original DACS paper \cite{tranheden2021dacs} and LoveDA benchmarks \cite{loveda2021}. While DACS achieved 39.10\% mIoU on LoveDA-rural in the original implementation, our PIDNet-S adaptation reached only 30.63\%. Similarly, adversarial training underperformed compared to Tsai et al. \cite{tsai2018learning} (30.59\% vs. 35.20\%). Three key factors explain these differences:
