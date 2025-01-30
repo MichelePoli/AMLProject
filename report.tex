@@ -387,7 +387,7 @@ This single-stage approach achieves domain invariance by directly matching the s
 					\hline
 					Model & mIoU (\%) & Latency (ms) & FLOPs & Params \\ \hline
 					DeepLabV2 & 33.41 & 13.42 & 11.535G & 62.231M \\ \hline
-					PIDNet-S & 48.67 & 288.70 & 6.35G & 7.72M \\ \hline
+					PIDNet-S & 48.67 & 9.23 & 6.35G & 7.72M \\ \hline
 				\end{tabular}
 			}
 			\caption{Performance comparison of different hyperparameter tuning.}
@@ -399,7 +399,7 @@ This single-stage approach achieves domain invariance by directly matching the s
 
 		\subsection{Domain shift evaluation}
 		\small
-		Table \ref{tab:shift} quantifies the domain shift from LoveDA-urban to LoveDA-rural. The baseline PIDNet-S model, trained on urban data, experienced a significant performance drop when tested on rural data. Data augmentations (A1 and A2) improved the mIoU, with A2 (photometric transforms) being the most effective. Adversarial training and DACS further mitigated the domain shift, achieving similar performance.
+		Table 4\ref{tab:shift_shift} quantifies the domain shift from LoveDA-urban to LoveDA-rural. The baseline PIDNet-S model, trained on urban data, experienced a significant performance drop when tested on rural data. Data augmentations (A1 and A2) improved the mIoU, with A2 (photometric transforms) being the most effective. Adversarial training and DACS further mitigated the domain shift, achieving similar performance.
 		
 	
 		\begin{figure}[H]
@@ -430,10 +430,37 @@ This single-stage approach achieves domain invariance by directly matching the s
 		\end{figure}
 
 
+	\end{multicols}
+	\begin{table}[H]
+		\centering
+		\renewcommand{\arraystretch}{1.2} % Aumenta lo spazio tra le righe per leggibilità
+		\setlength{\tabcolsep}{10pt} % Regola la spaziatura tra colonne
+		
+
+		\resizebox{\linewidth}{!}{ % Ridimensiona automaticamente la tabella alla larghezza della pagina
+				\begin{tabular}{|l|c|c|c|c|c|c|c|}
+					\hline
+					Model & Road & Building & Water & Barren & Forest & Agric. & mIoU \\ \hline
+					PIDNet & 16.34 & 23.99 & 35.46 & 3.12 & 8.83 & 31.82 & 23.98 \\ \hline
+					+ A1 & 29.33 & 40.77 & 36.71 & 9.17 & 9.53 & 33.13 & 29.91 \\ \hline
+					+ A2 & 31.41 & 38.37 & 31.33 & 10.26 & 15.10 & 37.51 & 30.80 \\ \hline
+					+ A1 + A2 & 27.92 & 32.97 & 33.98 & 10.50 & 10.69 & 37.45 & 29.35 \\ \hline
+					+ Adv. & 0.36 & 13.41 & 32.72 & 8.28 & 49.73 & 12.26 & 30.59 \\ \hline
+					+ DACS & 31.32 & 36.60 & 42.70 & 4.49 & 2.70 & 40.60 & 30.63 \\ \hline
+				\end{tabular}
+		}
+		\label{tab:shift_shift}
+		\caption{Performance comparison of different version of aumented dataset.}
+
+
+	\end{table}
+
+	\begin{multicols}{2}
 
 		\subsection{Extensions}
 		\justifying
 		Table \ref{tab:extensions} presents the results of the extensions on the LoveDA-rural dataset. Style transfer preprocessing improved the mIoU slightly compared to the baseline but was less effective than data augmentation or domain adaptation techniques. BiSeNetV1 and LinkNet showed competitive performance, with BiSeNetV1 outperforming PIDNet-S on the target domain.
+		Notably, BiSeNet STDC achieved the highest mIoU of 34.10\%, surpassing both BiSeNetV1 and LinkNet. This improvement is likely due to its lightweight yet effective spatial and channel attention mechanisms, which enhance feature extraction while maintaining efficiency. The superior performance of BiSeNet STDC suggests that optimizing network architecture can yield significant gains in rural scene segmentation.
 		
 
 		\begin{table}[H]
@@ -488,32 +515,7 @@ This single-stage approach achieves domain invariance by directly matching the s
 
         Smaller batch sizes (2, 8) resulted in significantly lower performance, likely due to higher gradient noise and instability in training, leading to suboptimal convergence. A higher learning rate (\(10^{-3}\)) caused a decrease in mIoU, probably due to overshooting during optimization, preventing the model from reaching a good local minimum. The introduction of an adaptive lambda strategy, while theoretically beneficial for balancing losses dynamically, did not improve the results, possibly due to inadequate adaptation to the dataset characteristics or suboptimal parameter tuning.
 
-	\end{multicols}
-	\begin{table}[H]
-		\centering
-		\renewcommand{\arraystretch}{1.2} % Aumenta lo spazio tra le righe per leggibilità
-		\setlength{\tabcolsep}{10pt} % Regola la spaziatura tra colonne
-		
 
-		\resizebox{\linewidth}{!}{ % Ridimensiona automaticamente la tabella alla larghezza della pagina
-				\begin{tabular}{|l|c|c|c|c|c|c|c|}
-					\hline
-					Model & Road & Building & Water & Barren & Forest & Agric. & mIoU \\ \hline
-					PIDNet & 16.34 & 23.99 & 35.46 & 3.12 & 8.83 & 31.82 & 23.98 \\ \hline
-					+ A1 & 29.33 & 40.77 & 36.71 & 9.17 & 9.53 & 33.13 & 29.91 \\ \hline
-					+ A2 & 31.41 & 38.37 & 31.33 & 10.26 & 15.10 & 37.51 & 30.80 \\ \hline
-					+ A1 + A2 & 27.92 & 32.97 & 33.98 & 10.50 & 10.69 & 37.45 & 29.35 \\ \hline
-					+ Adv. & 0.36 & 13.41 & 32.72 & 8.28 & 49.73 & 12.26 & 30.59 \\ \hline
-					+ DACS & 31.32 & 36.60 & 42.70 & 4.49 & 2.70 & 40.60 & 30.63 \\ \hline
-				\end{tabular}
-		}
-		\label{tab:shift}
-		\caption{Performance comparison of different version of aumented dataset.}
-
-
-	\end{table}
-
-	\begin{multicols}{2}
 
 
 
@@ -547,47 +549,11 @@ This single-stage approach achieves domain invariance by directly matching the s
 
 		\end{table}
 
-
-		\subsection{Comparison with original UDA paper results}
-		Table \ref{tab:uda_comparison} compares our domain adaptation results with those reported in the original DACS paper \cite{tranheden2021dacs} and LoveDA benchmarks \cite{loveda2021}. While DACS achieved 39.10\% mIoU on LoveDA-rural in the original implementation, our PIDNet-S adaptation reached only 30.63\%. Similarly, adversarial training underperformed compared to Tsai et al. \cite{tsai2018learning} (30.59\% vs. 35.20\%). Three key factors explain these differences:
-		
-		\begin{itemize}
-			\item \textbf{Model architecture}: The original DACS paper used DeepLabV2 with ResNet-101, which has significantly higher capacity (44.5M params) compared to our real-time PIDNet-S (7.72M params). This architectural difference directly impacts feature representation power.
-			\item \textbf{Training constraints}: Our experiments used a fixed 20-epoch training schedule to maintain real-time deployment capabilities, whereas the original works employed longer training (50+ epochs) with extensive hyperparameter tuning.
-			\item \textbf{Latency-Accuracy trade-off}: PIDNet-S prioritizes inference speed (288ms) over pure accuracy, while DeepLabV2-based implementations ignore latency constraints (typically 1,000ms).
-		\end{itemize}
-		
-		\justifying
-		These results highlight the inherent challenge of balancing domain adaptation performance with real-time requirements—a critical consideration for edge deployment scenarios.
-		
-
-		\begin{table}[H]
-			\centering
-			\renewcommand{\arraystretch}{1.4} % Aumenta lo spazio tra le righe per leggibilità
-			\setlength{\tabcolsep}{6pt} % Regola la spaziatura tra colonne
-			
-			\resizebox{\linewidth}{!}{%
-			\begin{tabular}{|l|l|c|c|}
-				\hline
-				Method & Model & mIoU (\%) & Latency (ms) \\ \hline
-				DACS (Original) \cite{tranheden2021dacs} & DeepLabV2 + ResNet-101 & 39.10 & 1,200 \\ \hline
-				DACS (Ours) & PIDNet-S & 30.63 & 288 \\ \hline
-				Adv. Training (Original) \cite{tsai2018learning} & DeepLabV2 + VGG16 & 35.20 & 850 \\ \hline
-				Adv. Training (Ours) & PIDNet-S & 30.59 & 288 \\ \hline
-			\end{tabular}%
-		}
-			\caption{Performance comparison with original UDA paper results.}
-			\label{tab:uda_comparison}
-
-		\end{table}
-
-
-
 		\section{Conclusion}
 		\justifying
 
 
-		This study highlights the effectiveness of PIDNet for real-time semantic segmentation, achieving a strong performance on the LoveDA-urban dataset (288ms latency, 48.67\% mIoU). However, the impact of domain shift, as observed on LoveDA-rural (23.98\% mIoU), underscores the challenges of applying segmentation models across divergent environments. Among the evaluated mitigation strategies, photometric data augmentation (A2) showed the most consistent improvement (+6.82\% mIoU), while adversarial training and DACS offered moderate yet comparable gains (+6.61\% and +6.65\% mIoU, respectively). Despite these advancements, the trade-off between accuracy and computational efficiency remains a key limitation, particularly in edge computing scenarios. 
+		This study highlights the effectiveness of PIDNet for real-time semantic segmentation, achieving a strong performance on the LoveDA-urban dataset (9.23ms latency, 48.67\% mIoU). However, the impact of domain shift, as observed on LoveDA-rural (23.98\% mIoU), underscores the challenges of applying segmentation models across divergent environments. Among the evaluated mitigation strategies, photometric data augmentation (A2) showed the most consistent improvement (+6.82\% mIoU), while adversarial training and DACS offered moderate yet comparable gains (+6.61\% and +6.65\% mIoU, respectively). Despite these advancements, the trade-off between accuracy and computational efficiency remains a key limitation, particularly in edge computing scenarios. 
 		\\
 		Our experiments demonstrate that while PIDNet excels in maintaining real-time capabilities, alternative architectures like BiSeNetV1 can surpass it in domain-adaptive accuracy, at a slight cost to speed. These findings suggest that a hybrid approach, integrating the efficiency of PIDNet with enhanced feature representation techniques from other models, could be a promising direction.
 		Future research could focus on:

@@ -20,8 +20,8 @@
 |----------------------|-------------------|------------|--------------|-------------|-----------|------------|
 | DeepLabV2      **B4**     | LoveDA-urban     | 20         | 0.3217          |16.42 ms       |  11.535G       | 62.231M        |
 | DeepLabV2      **B16**     | LoveDA-urban     | 20         |0.3342        | 13.42 ms        |  11.535G       | 62.231M        |
-| PIDNet (Real-time) **B2** | LoveDA-urban     | 20         | 0.3590         | 17.43 ms        | 6.346G      | 7.718M       |
-| PIDNet (Real-time) **B16** | LoveDA-urban     | 20         | 0.4867         | 288.70 ms        | 6.346G      | 7.718M       |
+| PIDNet (Real-time) **B2** | LoveDA-urban     | 20         | 0.3590         | 9.23 ms        | 6.346G      | 7.718M       |
+| PIDNet (Real-time) **B16** | LoveDA-urban     | 20         | 0.4867         | 9.23 ms        | 6.346G      | 7.718M       |
 
 
 ---
@@ -61,7 +61,7 @@
 | **Technique**                | **Description**                                                                                  |
 |-------------------------------|--------------------------------------------------------------------------------------------------|
 | Style Transfer               | Preprocess source images to match the target domain appearance using a style-transfer model.     |
-| Alternative Networks         | Explore other real-time networks such as STDC or PEM.                                           |
+| Alternative Networks         | Explore other real-time networks such as STDC.                                           |
 | Alternative Loss Functions   | Experiment with different segmentation losses to improve performance.                           |
 | Hyperparameter Tuning        | Optimize learning rates, batch sizes, and augmentation probabilities.                           |
 
