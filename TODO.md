@@ -95,7 +95,7 @@ tabelle più grosse
 			\end{minipage}
 
 			\caption{urban image }
-			\label{fig:dataset_urban_image1}
+			\label{fig:transfer}
 
 		\end{figure}
 
@@ -103,3 +103,25 @@ tabelle più grosse
 \end{multicols}
 Image
 \begin{multicols}{2}
+
+
+\begin{table}[H]
+			\centering
+			\renewcommand{\arraystretch}{1.4} % Aumenta lo spazio tra le righe per leggibilità
+			\setlength{\tabcolsep}{6pt} % Regola la spaziatura tra colonne
+			
+			\resizebox{\linewidth}{!}{%
+			\begin{tabular}{|l|c|}
+				\hline
+				Configuration & Best Validation mIoU (\%) \\ \hline
+				Batch Size = 16, LR = \(10^{-4}\) (Default)  & 30.63 \\ \hline
+				Batch Size = 2, LR = \(10^{-4}\)  & 15.00 \\ \hline
+				Batch Size = 8, LR = \(10^{-4}\)  & 16.59 \\ \hline
+				Batch Size = 16, LR = \(10^{-3}\)  & 19.09 \\ \hline
+				Batch Size = 16, Adaptive Lambda  & 18.26 \\ \hline
+			\end{tabular}
+			}
+			\caption{Performance comparison of different models on urban images.}
+			\label{tab:hyperparameters}
+
+		\end{table}

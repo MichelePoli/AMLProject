@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.22)  29 JAN 2025 20:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.22)  30 JAN 2025 09:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -470,109 +470,150 @@ File: image/aug/3_aug2.png Graphic file (type png)
 <use image/aug/3_aug2.png>
 Package pdftex.def Info: image/aug/3_aug2.png  used on input line 188.
 (pdftex.def)             Requested size: 113.68623pt x 116.072pt.
+<image/dacs_source2.png, id=169, 276.28218pt x 274.02374pt>
+File: image/dacs_source2.png Graphic file (type png)
+<use image/dacs_source2.png>
+Package pdftex.def Info: image/dacs_source2.png  used on input line 244.
+(pdftex.def)             Requested size: 113.68623pt x 112.75604pt.
+<image/dacs_target2.png, id=170, 274.77657pt x 277.78781pt>
+File: image/dacs_target2.png Graphic file (type png)
+<use image/dacs_target2.png>
+Package pdftex.def Info: image/dacs_target2.png  used on input line 250.
+(pdftex.def)             Requested size: 113.68623pt x 114.9322pt.
+<image/dacs_mixed2.png, id=171, 274.77657pt x 274.77657pt>
+File: image/dacs_mixed2.png Graphic file (type png)
+<use image/dacs_mixed2.png>
+Package pdftex.def Info: image/dacs_mixed2.png  used on input line 259.
+(pdftex.def)             Requested size: 113.68623pt x 113.68633pt.
  [4
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.269 			\item C
-                onsistency regularization on the mixed-domain samples. <./image/aug/4_aug1+urban.png> <./image/aug/3_aug2.png>]
-<image/general/DACS_structure.png, id=187, 261.97874pt x 94.10156pt>
-File: image/general/DACS_structure.png Graphic file (type png)
-<use image/general/DACS_structure.png>
-Package pdftex.def Info: image/general/DACS_structure.png  used on input line 278.
-(pdftex.def)             Requested size: 236.84843pt x 85.07686pt.
-<image/urban+mask4.png, id=191, 572.89032pt x 280.79906pt>
-File: image/urban+mask4.png Graphic file (type png)
-<use image/urban+mask4.png>
-Package pdftex.def Info: image/urban+mask4.png  used on input line 303.
-(pdftex.def)             Requested size: 236.84843pt x 116.09239pt.
-<image/rural+mask4.png, id=192, 570.63188pt x 277.78781pt>
-File: image/rural+mask4.png Graphic file (type png)
-<use image/rural+mask4.png>
-Package pdftex.def Info: image/rural+mask4.png  used on input line 308.
-(pdftex.def)             Requested size: 236.84843pt x 115.29674pt.
- [5
+l.278 			\item A
+                 source domain image, which comes with ground-truth labels.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.328 		\end{itemize}
-                     
+l.278 			\item A
+                 source domain image, which comes with ground-truth labels. <./image/aug/4_aug1+urban.png> <./image/aug/3_aug2.png> <./image/dacs_source2.png> <./image/dacs_target2.png> <./image/dacs_mixed2.png>]
+<image/general/DACS_structure.png, id=194, 261.97874pt x 94.10156pt>
+File: image/general/DACS_structure.png Graphic file (type png)
+<use image/general/DACS_structure.png>
+Package pdftex.def Info: image/general/DACS_structure.png  used on input line 305.
+(pdftex.def)             Requested size: 236.84843pt x 85.07686pt.
+<image/urban+mask4.png, id=198, 572.89032pt x 280.79906pt>
+File: image/urban+mask4.png Graphic file (type png)
+<use image/urban+mask4.png>
+Package pdftex.def Info: image/urban+mask4.png  used on input line 330.
+(pdftex.def)             Requested size: 236.84843pt x 116.09239pt.
+<image/rural+mask4.png, id=199, 570.63188pt x 277.78781pt>
+File: image/rural+mask4.png Graphic file (type png)
+<use image/rural+mask4.png>
+Package pdftex.def Info: image/rural+mask4.png  used on input line 335.
+(pdftex.def)             Requested size: 236.84843pt x 115.29674pt.
+ [5
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.328 		\end{itemize}
-                      <./image/general/DACS_structure.png> <./image/urban+mask4.png> <./image/rural+mask4.png>]
-<image/urban+mask2.png, id=208, 570.63188pt x 280.79906pt>
-File: image/urban+mask2.png Graphic file (type png)
-<use image/urban+mask2.png>
-Package pdftex.def Info: image/urban+mask2.png  used on input line 336.
-(pdftex.def)             Requested size: 236.84843pt x 116.54657pt.
-<image/rural+mask5.png, id=209, 572.89032pt x 280.04625pt>
-File: image/rural+mask5.png Graphic file (type png)
-<use image/rural+mask5.png>
-Package pdftex.def Info: image/rural+mask5.png  used on input line 341.
-(pdftex.def)             Requested size: 236.84843pt x 115.78116pt.
-
-
-Package hyperref Warning: Suppressing empty link on input line 376.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 407.
-[6
+l.349 		
+        
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.436 	\end{multicols}
-                      
+l.349 		
+         <./image/general/DACS_structure.png> <./image/urban+mask4.png> <./image/rural+mask4.png>]
+<image/urban+mask2.png, id=216, 570.63188pt x 280.79906pt>
+File: image/urban+mask2.png Graphic file (type png)
+<use image/urban+mask2.png>
+Package pdftex.def Info: image/urban+mask2.png  used on input line 362.
+(pdftex.def)             Requested size: 236.84843pt x 116.54657pt.
+<image/rural+mask5.png, id=217, 572.89032pt x 280.04625pt>
+File: image/rural+mask5.png Graphic file (type png)
+<use image/rural+mask5.png>
+Package pdftex.def Info: image/rural+mask5.png  used on input line 367.
+(pdftex.def)             Requested size: 236.84843pt x 115.78116pt.
+
+
+Package hyperref Warning: Suppressing empty link on input line 402.
+
+<image/nst/urban+mask2.png, id=219, 523.20468pt x 256.70906pt>
+File: image/nst/urban+mask2.png Graphic file (type png)
+<use image/nst/urban+mask2.png>
+Package pdftex.def Info: image/nst/urban+mask2.png  used on input line 409.
+(pdftex.def)             Requested size: 189.47946pt x 92.96748pt.
+<image/nst/rural+mask2.png, id=220, 526.96875pt x 255.95625pt>
+File: image/nst/rural+mask2.png Graphic file (type png)
+<use image/nst/rural+mask2.png>
+Package pdftex.def Info: image/nst/rural+mask2.png  used on input line 415.
+(pdftex.def)             Requested size: 189.47946pt x 92.03482pt.
+<image/nst/mixed+mask2.png, id=221, 522.45187pt x 257.46187pt>
+File: image/nst/mixed+mask2.png Graphic file (type png)
+<use image/nst/mixed+mask2.png>
+Package pdftex.def Info: image/nst/mixed+mask2.png  used on input line 422.
+(pdftex.def)             Requested size: 189.47946pt x 93.37369pt.
+[6
+pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.437 		
+        
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.436 	\end{multicols}
-                      
+l.437 		
+        
+pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.437 		
+         <./image/urban+mask2.png> <./image/rural+mask5.png> <./image/nst/urban+mask2.png> <./image/nst/rural+mask2.png> <./image/nst/mixed+mask2.png>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 462.
+ [7
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.436 	\end{multicols}
-                      
+l.549 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.436 	\end{multicols}
-                       <./image/urban+mask2.png> <./image/rural+mask5.png>]
-Overfull \hbox (5.00308pt too wide) in paragraph at lines 479--489
- [] 
- []
-
-
-Overfull \hbox (4.99493pt too wide) in paragraph at lines 512--522
- [] 
- []
-
-[7
+l.549 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.532 
-      ] (report.bbl) [8] (report.aux)
+l.549 
+      ] (report.bbl [8
+pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.28 
+     
+pdfTeX warning (ext4): destination with the same identifier (name{table.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.28 
+     ]) [9] (report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: BEE4E2E3799BD8709C7463AE5AD9C892;3911.
+(rerunfilecheck)             Checksum: 38290E9224B6CD0E2A802E7BEA760107;3911.
  ) 
 Here is how much of TeX's memory you used:
- 9494 strings out of 474485
- 152124 string characters out of 5744206
+ 9543 strings out of 474485
+ 153466 string characters out of 5744206
  1953542 words of memory out of 5000000
- 31610 multiletter control sequences out of 15000+600000
+ 31654 multiletter control sequences out of 15000+600000
  564085 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,1124b,754s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,1124b,774s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (8 pages, 4510324 bytes).
+Output written on report.pdf (9 pages, 6203673 bytes).
 PDF statistics:
- 334 PDF objects out of 1000 (max. 8388607)
- 62 named destinations out of 1000 (max. 500000)
- 260 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 357 PDF objects out of 1000 (max. 8388607)
+ 67 named destinations out of 1000 (max. 500000)
+ 290 words of extra memory for PDF output out of 10000 (max. 10000000)
 

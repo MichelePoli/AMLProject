@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex report"] 1738177464.56819 "report.aux" "report.bbl" "report" 1738177467.36972 0
+["bibtex report"] 1738226978.68262 "report.aux" "report.bbl" "report" 1738226981.35593 0
   "./references.bib" 1738049269 4895 303ba7e7fa87b065a8392f244fe958ec ""
   "C:/Users/user/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/ieeetran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "report.aux" 1738177466 10255 0fa0d9658f9011f681e65f6f743c3bbf "pdflatex"
+  "report.aux" 1738226980 11108 161a68f35468c98b462a975841491e64 "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1738177464.97551 "c:/Users/user/Documents/UNI/advanced machine learning/PROJECT/AMLProject/report.tex" "report.pdf" "report" 1738177467.37084 0
+["pdflatex"] 1738226979.02174 "c:/Users/user/Documents/UNI/advanced machine learning/PROJECT/AMLProject/report.tex" "report.pdf" "report" 1738226981.35697 0
   "C:/Users/user/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1738087539 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/user/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1737985785 11548 e18e8087b69a55ea6e3ba3ec5717dc10 ""
   "C:/Users/user/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1737536032 24224615 f2530f20cf232f82d6cdc2123847d697 ""
@@ -93,12 +93,18 @@
   "C:/Users/user/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/user/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty" 1700599895 32515 51caec75eda9c8890135f12f1a4eddc3 ""
   "C:/Users/user/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/Users/user/Documents/UNI/advanced machine learning/PROJECT/AMLProject/report.tex" 1738177462 32355 0c0dc8f652260be12736541cbe75ab10 ""
+  "c:/Users/user/Documents/UNI/advanced machine learning/PROJECT/AMLProject/report.tex" 1738226975 33956 1adabb2b08b8b7e2baaadfe56b2c6168 ""
   "image/aug/3_aug2.png" 1738000367 364864 78feb69b12b81b83e2508e6a5a8d9017 ""
   "image/aug/4_aug1+urban.png" 1737996783 312426 6252208196f11dc393cf56d70c121cfd ""
+  "image/dacs_mixed2.png" 1738172508 260503 9ab6ac26e28f9522e1eb54e539e51f9e ""
+  "image/dacs_source2.png" 1738172473 258754 29d7a82b7ce1085e038fb1b554d1454d ""
+  "image/dacs_target2.png" 1738172487 238802 4ed616a409bf79ce08e1d51fe8fe61e6 ""
   "image/general/DACS_structure.png" 1738060900 8451 a2c6ce95f16cfeb31edb996a36ce9b43 ""
   "image/general/PIDNET.png" 1738171974 166389 a932e160f69db6892bdb6ff6a80f067d ""
   "image/general/adversarial_model.png" 1738170672 143299 0393712630ea0686d7d889e0c87aa28a ""
+  "image/nst/mixed+mask2.png" 1738226053 275169 1cba5eba3a54054ea7b577c5926ab71d ""
+  "image/nst/rural+mask2.png" 1738226036 240083 ef3c22207332e14ea753c63717a9db7c ""
+  "image/nst/urban+mask2.png" 1738225987 275175 8cd8c6f4282ce31e6da4f1d239b8937c ""
   "image/rural+mask4.png" 1738147854 244525 34e2306289e87730fce52638bc619730 ""
   "image/rural+mask5.png" 1738148030 296241 fff67b4251dfcf45ab0f6a31c848fede ""
   "image/rural_1.png" 1738148599 421962 31f4f15d5bf0674298c1a2147e559f7b ""
@@ -109,10 +115,10 @@
   "image/urban_1.png" 1738148672 221589 de89d6808356a0ab73fe72d26d959afc ""
   "image/urban_2.png" 1738058169 416457 8a6597fee6aa27405c9244ad82da6291 ""
   "image/urban_3.png" 1738175250 231726 6c3b5997c9659e0b75042ad16c2ae82b ""
-  "report.aux" 1738177466 10255 0fa0d9658f9011f681e65f6f743c3bbf "pdflatex"
-  "report.bbl" 1738177464 3477 3371167d8c9aecb5cca5e48f783819ca "bibtex report"
-  "report.out" 1738177466 3911 bee4e2e3799bd8709c7463ae5ad9c892 "pdflatex"
-  "report.tex" 1738177462 32355 0c0dc8f652260be12736541cbe75ab10 ""
+  "report.aux" 1738226980 11108 161a68f35468c98b462a975841491e64 "pdflatex"
+  "report.bbl" 1738226978 3477 3371167d8c9aecb5cca5e48f783819ca "bibtex report"
+  "report.out" 1738226980 3911 38290e9224b6cd0e2a802e7bea760107 "pdflatex"
+  "report.tex" 1738226975 33956 1adabb2b08b8b7e2baaadfe56b2c6168 ""
   (generated)
   "report.aux"
   "report.log"
